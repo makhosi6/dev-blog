@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     <div class="block-21 mb-4 d-flex">
-                        <a class="img mr-4 rounded" style="background-image: url(images/image_2.jpg);"></a>
+                        <a class="img mr-4 rounded" style="background-image: url('/images/image_2.jpg');"></a>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                             <div class="meta">
@@ -82,7 +82,7 @@
                     Copyright &copy;
                     <script>
                         document.write(new Date().getFullYear());
-                    </script> All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://google.com?q=makhosi6" target="_blank">Me</a> & <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    </script> All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a class="line" href="https://github.com/makhosi6" target="_blank">Me</a> & <a class="line" href="https://colorlib.com" target="_blank">Colorlib</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
             </div>

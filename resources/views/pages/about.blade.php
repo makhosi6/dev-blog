@@ -4,28 +4,28 @@
     <div class="container">
         <div class="row d-flex">
             <div class="col-md-6 d-flex">
-                <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url(images/about.jpg);">
-                    <a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
-                        <span class="icon-play"></span>
+                <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url('/images/ab455g.jpg');">
+                    <a href="https://vimeo.com/45830194" class="icon-embed d-flex justify-content-center align-items-center">
+                        <span class="icon-embed"></span>
                     </a>
                 </div>
             </div>
             <div class="col-md-6 pl-md-5 py-md-5">
                 <div class="row justify-content-start pt-3 pb-3">
                     <div class="col-md-12 heading-section ftco-animate">
-                        <span class="subheading">Welcome to Readit</span>
+                        <span class="subheading">Welcome.</span>
                         <h2 class="mb-4">We give you the best articles you want.</h2>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
                         <div class="tabulation-2 mt-4">
                             <ul class="nav nav-pills nav-fill d-md-flex d-block">
                                 <li class="nav-item mb-md-0 mb-2">
-                                    <a class="nav-link active py-2" data-toggle="tab" href="#home1">Our Mission</a>
+                                    <a class="nav-link active py-2" data-toggle="tab" href="#home1">Mission</a>
                                 </li>
                                 <li class="nav-item px-lg-2 mb-md-0 mb-2">
-                                    <a class="nav-link py-2" data-toggle="tab" href="#home2">Our Vision</a>
+                                    <a class="nav-link py-2" data-toggle="tab" href="#home2">Vision</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link py-2 mb-md-0 mb-2" data-toggle="tab" href="#home3">Our Value</a>
+                                    <a class="nav-link py-2 mb-md-0 mb-2" data-toggle="tab" href="#home3">Value</a>
                                 </li>
                             </ul>
                             <div class="tab-content bg-light rounded mt-2">

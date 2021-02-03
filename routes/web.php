@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\pagesController as Pages;
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +14,16 @@ use App\Http\Controllers\pagesController as Pages;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/admins/home', function () {
+    return view('welcome');
+});
 //
+Route::get('/', 'pagesController@index');
+Route::get('/articles/{slugs}', 'pagesController@articles');
+Route::get('/article/{title}', 'pagesController@article');
 Route::get('/about', 'pagesController@about');
 Route::get('/contact','pagesController@contact');
-Route::get('/', 'pagesController@index');
-Route::get('/articles/{params}', [Pages::class, 'show']);
-// Route::get('/', 'pagesController@index');
 
-// Auth::routes();
+Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('admins', 'PostController');

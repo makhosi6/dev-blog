@@ -1,33 +1,61 @@
 <?php
-
 namespace App\Http\Controllers;
-use App\Post;
-use Illuminate\Support\Facades\DB;
 
-class pagesController extends Controller {
-    public function test($param){
-        echo $param;
+use App\Post;
+
+class pagesController extends Controller
+{
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function article($title)
+    {
+        //
+        $post = Post::find($title);
+        return view('posts.single')->with('title', $title)->with('post', $post);
     }
-    public function index(){
-        $posts = Post::orderBy('created_at','desc')->paginate(2);
-        // $posts = DB::select('SELECT * FROM posts');
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $posts = Post::orderBy('created_at', 'desc')->paginate(2);
         return view('posts.index')->with('posts', $posts);
     }
-    public function articles($params){
-        $posts = Post::orderBy('created_at','desc')->paginate(2);
-        // $posts = DB::select('SELECT * FROM posts');
-       // $posts = DB::table('articles')->where('categoty', $params)->paginate(15);
-       return view('pages.articles')->with('posts', $posts);
-    }
 
-    public function about(){
-        return view('pages/about');
+    /**
+     * Display a list from a specified resource.
+     *
+     * @param  int  $params
+     * @return \Illuminate\Http\Response
+     */
+    public function articles($params)
+    {
+        $posts = Post::orderBy('created_at', 'desc')->paginate(2);
+        // $posts = DB::select('SELECT * FROM posts WHERE category=$params')->paginate(15);
+        return view('pages.articles')->with('posts', $posts, )->with('name', $params);
     }
-    public function contact(){
-     $data = array(
-            'title' => 'Services',
-            'services'=> ['SEO', 'Web Design', 'Software Development', 'Data Mining'],
-        );
-        return view('pages/services')->with($data);
+    /**
+     * Show/return a view.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function about()
+    {
+        return view('pages.about');
+    }
+    /**
+     * Show/return a view.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function contact()
+    {
+        return view('pages.contact');
     }
 }

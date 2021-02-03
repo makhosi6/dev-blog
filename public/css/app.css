@@ -1,0 +1,22 @@
+.caps {
+  text-transform: capitalize !important;
+}
+.line{
+  text-decoration: underline !important;
+}
+
+.center-pager {
+  max-width: fit-content !important;
+  margin: auto !important;
+}
+.pagination li {
+  padding-right: 5px !important;
+}
+
+.no-articles a {
+  text-align: center;
+  color: gray !important;
+}
+.vw-100{
+  width: 100% !important;
+}

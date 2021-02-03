@@ -37,8 +37,8 @@
             @foreach ($posts as $post)
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="/posts/{{$post->title}}" class="block-20"
-                        style="background-image: url('images/image_9.jpg');">
+                    <a href="/admins/{{$post->id}}" class="block-20"
+                        style="background-image: url('./images/image_9.jpg');">
                     </a>
                     <div class="text p-4 float-right d-block">
                         <div class="topper d-flex align-items-center">
@@ -60,7 +60,6 @@
                 </div>
             </div>
             @endforeach
-
             @else
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">

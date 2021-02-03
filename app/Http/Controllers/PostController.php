@@ -17,9 +17,9 @@ class PostController extends Controller
     {
         //
         // $posts = Post::orderBy('created_at','desc')->get();
-        $posts = Post::orderBy('created_at','desc')->paginate(20);
+        $posts = Post::orderBy('created_at','desc')->paginate(2);
         // $posts = DB::select('SELECT * FROM posts');
-        return view('posts.index')->with('posts', $posts);
+        return view('admin.index')->with('posts', $posts);
     }
 
     /**
@@ -30,7 +30,7 @@ class PostController extends Controller
     public function create()
     {
         //
-        return view('posts.create');
+        return view('admin.create');
     }
 
     /**
@@ -52,7 +52,7 @@ class PostController extends Controller
         $post->body = $request->input('body');
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post Created');
+        return redirect('/admins')->with('success', 'Post Created');
     }
 
     /**
@@ -63,10 +63,9 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+       //
         $post= Post::find($id);
-
-        return view('posts.one')->with('post', $post);
+        return view('admin.single')->with('title', $id)->with('post', $post);
     }
 
     /**
@@ -79,7 +78,7 @@ class PostController extends Controller
     {
         //
         $post= Post::find($id);
-        return view('posts.edit')->with('post', $post);
+        return view('admin.edit')->with('post', $post);
     }
 
     /**
@@ -100,7 +99,7 @@ class PostController extends Controller
         $post->body = $request->input('body');
         $post->save();
 
-        return redirect('/posts')->with('Success', 'Post Updated');
+        return redirect('/admins')->with('Success', 'Post Updated');
     }
 
     /**
@@ -114,6 +113,6 @@ class PostController extends Controller
         //
         $post= Post::find($id);
         $post->delete();
-        return redirect('/posts')->with('Success', 'Post Deleted');
+        return redirect('/admins')->with('Success', 'Post Deleted');
     }
 }
