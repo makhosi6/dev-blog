@@ -1,7 +1,15 @@
+* {
+  transition: all 0.5s ease !important;
+  -webkit-transition: all 0.5s ease !important;
+  -moz-transition: all 0.5s ease !important;
+  -o-transition: all 0.5s ease !important;
+}
+
 .caps {
   text-transform: capitalize !important;
 }
-.line{
+
+.line {
   text-decoration: underline !important;
 }
 
@@ -9,6 +17,7 @@
   max-width: fit-content !important;
   margin: auto !important;
 }
+
 .pagination li {
   padding-right: 5px !important;
 }
@@ -17,6 +26,22 @@
   text-align: center;
   color: gray !important;
 }
-.vw-100{
+
+.vw-100 {
   width: 100% !important;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.drp-dwn-item>a {
+  color: #6c757d !important;
+}
+
+.drp-dwn-item>a:hover,
+.drp-dwn-item>a:focus {
+  color: #ffd369 !important;
 }

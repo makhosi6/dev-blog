@@ -7,7 +7,16 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/articles/express" class="nav-link">Articles</a></li>
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link" data-toggle="dropdown">Articles
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-1</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-2</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-3</a></li>
+                    </ul>
+                  </li>
+
                 <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
             </ul>

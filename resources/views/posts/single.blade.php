@@ -98,24 +98,7 @@
                     </div>
                 </div>
 
-                <div class="sidebar-box ftco-animate">
-                    <h3>Tag Cloud</h3>
-                    <div class="tagcloud">
-                        <a href="#" class="tag-cloud-link">cat</a>
-                        <a href="#" class="tag-cloud-link">abstract</a>
-                        <a href="#" class="tag-cloud-link">people</a>
-                        <a href="#" class="tag-cloud-link">person</a>
-                        <a href="#" class="tag-cloud-link">model</a>
-                        <a href="#" class="tag-cloud-link">delicious</a>
-                        <a href="#" class="tag-cloud-link">desserts</a>
-                        <a href="#" class="tag-cloud-link">drinks</a>
-                    </div>
-                </div>
-
-                <div class="sidebar-box ftco-animate">
-                    <h3>Paragraph</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-                </div>
+                
             </div>
 
         </div>
