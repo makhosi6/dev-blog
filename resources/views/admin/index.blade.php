@@ -50,7 +50,7 @@
                                 <span class="mos">October</span>
                             </div>
                         </div>
-                        <span class="subheading">Application</span>
+                        <span class="subheading mt-20">Application</span>
                         <h3 class="heading mb-3"><a href="#">All you want to know about industrial laws</a></h3>
                         <p>A small river named Duden flow by their place and supplies it with the necessary regelialia.
                             - {!!$post->id!!}</p>
@@ -58,6 +58,10 @@
                                 more</a></p>
                     </div>
                 </div>
+                {{-- {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                {{Form::hidden('_method', 'DELETE')}}
+                {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+            {!!Form::close()!!} --}}
             </div>
             @endforeach
             @else

@@ -1,3 +1,4 @@
+@import './open-iconic-bootstrap.min.css';
 * {
   transition: all 0.5s ease !important;
   -webkit-transition: all 0.5s ease !important;
@@ -45,3 +46,48 @@
 .drp-dwn-item>a:focus {
   color: #ffd369 !important;
 }
+
+* {
+  line-height: 1.75em !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, sans-serif !important;
+}
+.mt-20 {
+  margin-top: 20px !important;
+}
+.io-font {
+  font-family: Icons !important;
+}
+/* 
+
+.hero-wrap .overlay {
+  background: -webkit-gradient(linear, left top, right top, from(#0072ff), to(#00d4ff)) !important;
+  background: linear-gradient(90deg, #0072ff 0%, #00d4ff 100%) !important;
+}
+  li > a:hover,
+  li > a:focus,
+  li > a >span:hover,
+.navbar-brand i,
+.nav-item.active>a,
+.logo a span,
+.nav-item .active,
+.nav-item.active > a,
+li.active,
+.ion-ios-arrow-forward:hover
+
+ {
+  color: #68d18f !important;
+}
+
+.ftco-footer {
+  background-color: #70a4f8 !important;
+}
+
+.meta a {
+  color: #32325d !important;
+  font-weight: bolder;
+}
+.nav-pills .nav-item .nav-link.active {
+  color: #fff!important;
+  background-color: #68d18f !important;
+  border: 1px solid #68d18f !important;
+}  */

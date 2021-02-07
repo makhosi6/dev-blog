@@ -20,21 +20,37 @@
 </section>
 <section class="ftco-section bg-light">
     <div class="container">
-        <a class="btn btn-default" href="/admins">Back to Posts</a>
-        <h3>{{$post->title}}</h3>
-        <p>{!!$post->body!!}</p>
-        <hr>
-        <small>
-            <strong>
-                Written at {{$post->created_at}}
-            </strong>
-        </small>
-        <hr>
-        <a href="/admins/{{$post->id}}/edit" class="btn btn-default">Edit</a>
-        {!!Form::open(['action' => ['PostController@destroy', $post->id], 'method' => 'POST','class' => 'pull-right'])!!}
-            {{Form::hidden('_method', 'DELETE')}}
-            {{Form::submit('Delete', ['class'=>'btn btn-danger'])}}
-        {!!Form::close() !!}
+    <h3>Create Post</h3>
+    {!! Form::open(['action' => 'PostController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+        <div class="form-group">
+            {{Form::label('title', 'Title')}}
+            {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
+        </div>
+        <div class="form-group">
+            {{Form::label('sub-title', 'Sub-title')}}
+            {{Form::text('sub-title', '', ['class' => 'form-control', 'placeholder' => 'Sub-title'])}}
+        </div>
+        <div class="form-group">
+            {{Form::label('category', 'Category')}}
+            {{Form::text('category', '', ['class' => 'form-control', 'placeholder' => 'Category'])}}
+        </div>
+        <div class="form-group">
+            {{Form::label('body', 'Body')}}
+            {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
+        </div>
+        <div class="form-group">
+            {{Form::label('references', 'References')}}
+            {{Form::textarea('references', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'References Text'])}}
+        </div>
+        <div class="form-group">
+            {{Form::file('cover_image')}}
+        </div>
+        <div class="form-group">
+            {{Form::label('publish', 'Publish')}} <br>
+           {{ Form::select('publish', array('P' => 'Publish', 'D' => 'Draft'), 'P')}}
+        </div>
+        {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+    {!! Form::close() !!}
 </div>
 </section>
 @endsection
