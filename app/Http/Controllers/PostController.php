@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use DB;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -17,7 +16,7 @@ class PostController extends Controller
     {
         //
         // $posts = Post::orderBy('created_at','desc')->get();
-        $posts = Post::orderBy('created_at','desc')->paginate(2);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(2);
         // $posts = DB::select('SELECT * FROM posts');
         return view('admin.index')->with('posts', $posts);
     }
@@ -30,8 +29,6 @@ class PostController extends Controller
     public function create()
     {
         //
-        
-
         return view('admin.create');
     }
 
@@ -45,10 +42,10 @@ class PostController extends Controller
     {
         //
         $this->validate($request, [
-            'title'=> 'required',
-            'body'=> 'required'
+            'title' => 'required',
+            'body' => 'required',
         ]);
-        $post= new Post;
+        $post = new Post;
 
         $post->title = $request->input('title');
         $post->body = $request->input('body');
@@ -65,8 +62,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-       //
-        $post= Post::find($id);
+        //
+        $post = Post::find($id);
         return view('admin.single')->with('title', $id)->with('post', $post);
     }
 
@@ -79,7 +76,7 @@ class PostController extends Controller
     public function edit($id)
     {
         //
-        $post= Post::find($id);
+        $post = Post::find($id);
         return view('admin.edit')->with('post', $post);
     }
 
@@ -93,10 +90,10 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title'=> 'required',
-            'body'=> 'required'
+            'title' => 'required',
+            'body' => 'required',
         ]);
-        $post= Post::find($id);
+        $post = Post::find($id);
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->save();
@@ -113,7 +110,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
-        $post= Post::find($id);
+        $post = Post::find($id);
         $post->delete();
         return redirect('/admins')->with('Success', 'Post Deleted');
     }

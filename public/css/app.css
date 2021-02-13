@@ -57,6 +57,9 @@
 .io-font {
   font-family: Icons !important;
 }
+h1.lh {
+  line-height: 1 !important;
+}
 /* 
 
 .hero-wrap .overlay {

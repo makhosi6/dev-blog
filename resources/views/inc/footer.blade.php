@@ -118,6 +118,15 @@
                                     <li><a href="#">Sub-1</a></li>
                                     <li><a href="#">Sub-2</a></li>
                                     <li><a href="#">Sub-3</a></li>
+                                    <li><a href="#">Sub-1</a></li>
+                                    <li><a href="#">Sub-2</a></li>
+                                    <li><a href="#">Sub-3</a></li>
+                                    <li><a href="#">Sub-1</a></li>
+                                    <li><a href="#">Sub-2</a></li>
+                                    <li><a href="#">Sub-3</a></li>
+                                    <li><a href="#">Sub-1</a></li>
+                                    <li><a href="#">Sub-2</a></li>
+                                    <li><a href="#">Sub-3</a></li>
                                 </ul>
                         </li>
                         <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Contact</a>
@@ -148,7 +157,7 @@
                     Copyright &copy;
                     <script>
                         document.write(new Date().getFullYear());
-                    </script> All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true"></i>
+                    </script> | Made with <i class="icon-heart color-danger" aria-hidden="true"></i>
                     by <a class="line" href="https://github.com/makhosi6" target="_blank">Me</a> & <a class="line"
                         href="https://colorlib.com" target="_blank">Colorlib</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

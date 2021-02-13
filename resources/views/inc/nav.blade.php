@@ -15,6 +15,18 @@
                       <li class="center-pager drp-dwn-item"><a href="#">Page 1-1</a></li>
                       <li class="center-pager drp-dwn-item"><a href="#">Page 1-2</a></li>
                       <li class="center-pager drp-dwn-item"><a href="#">Page 1-3</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-1</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-2</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-3</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-1</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-2</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-3</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-1</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-2</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-3</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-1</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-2</a></li>
+                      <li class="center-pager drp-dwn-item"><a href="#">Page 1-3</a></li>
                     </ul>
                   </li>
 

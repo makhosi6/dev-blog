@@ -5,10 +5,9 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate pb-5 text-center">
-                <h1 title="{!!$title!!}" class="mb-3 bread ellipsis">{!!$title!!}</h1>
+                <h1 title="{!!$title!!}" class="mb-3 bread lh">{!!$title!!}</h1>
                 <p class="breadcrumbs">
-                    <span class="mr-2"><a href="index.html">Home <i  class="ion-ios-arrow-forward"></i>
-                        
+                    <span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i>
                     </a></span> <span class="mr-2"><a href="blog.html">Article <i class="ion-ios-arrow-forward"></i></a></span> <span class="ellipsis">{!!$title!!} <i class="ion-ios-arrow-forward"></i></span></p>
             </div>
         </div>
@@ -23,8 +22,7 @@
                     <img src="../images/image_1.jpg" alt="" class="img-fluid">
                 </p>
                 <h2 class="mb-3">It is a long established fact a reader be distracted</h2>
-                
-                    {!!$post->body!!}
+                   {!!$post->body!!}
             </div>
             <!-- .col-md-8 -->
             <div class="col-lg-4 sidebar pl-lg-5 ftco-animate">
@@ -46,7 +44,6 @@
                         <li><a href="#">Marketing <span class="ion-ios-arrow-forward"></span></a></li>
                     </div>
                 </div>
-
                 <div class="sidebar-box ftco-animate">
                     <h3>Recent Blog</h3>
                     <div class="block-21 mb-4 d-flex">

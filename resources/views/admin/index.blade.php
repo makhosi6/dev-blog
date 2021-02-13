@@ -54,8 +54,11 @@
                         <h3 class="heading mb-3"><a href="#">All you want to know about industrial laws</a></h3>
                         <p>A small river named Duden flow by their place and supplies it with the necessary regelialia.
                             - {!!$post->id!!}</p>
-                        <p><a href="#" class="btn-custom"><span class="ion-ios-arrow-round-forward mr-3"></span>Read
-                                more</a></p>
+                        <p>
+                            <a href="#" class="btn-custom"><span class="ion-ios-arrow-round-forward mr-3"></span>Read
+                                more
+                            </a>
+                        </p>
                     </div>
                 </div>
                 {{-- {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}

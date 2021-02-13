@@ -22,9 +22,16 @@
     <div class="container">
     <h3>Create Post</h3>
     {!! Form::open(['action' => 'PostController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+    <div class="form-group">
+        {{Form::label('title', 'Title')}}
+        {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
+        <pre class="limit">
+            Character Limit: 43
+        </pre>
+    </div>
         <div class="form-group">
-            {{Form::label('title', 'Title')}}
-            {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
+            {{Form::label('slug', 'Slug')}}
+            {{Form::text('slug', '', ['class' => 'form-control', 'placeholder' => 'Slug'])}}
         </div>
         <div class="form-group">
             {{Form::label('sub-title', 'Sub-title')}}
