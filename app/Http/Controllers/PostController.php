@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class PostController extends Controller
 {
@@ -43,12 +46,46 @@ class PostController extends Controller
         //
         $this->validate($request, [
             'title' => 'required',
+            'sub-title' => 'required',
+            'slug' => 'required',
             'body' => 'required',
+            'category' => 'required',
+            'publish' => 'required',
+            'cover_image' => 'image|nullable|max:1999',
         ]);
-        $post = new Post;
+        //
+        if ($request->hasFile('cover_image')) {
+            // Get filename with the extension
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            // Get just ext
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+            // Filename to store
+            $fileNameToStore = $filename . '_' . time() . '.' . $extension;
+            // Upload Image
+            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
 
-        $post->title = $request->input('title');
+            // // make thumbnails
+            // $thumbStore = 'thumb.' . $filename . '_' . time() . '.' . $extension;
+            // $thumb = Image::make($request->file('cover_image')->getRealPath());
+
+            // $thumb->save('storage/cover_images/' . $thumbStore);
+        } else {
+            $fileNameToStore = 'noimage.png';
+        }
+
+        $post = new Post;
+        $post->id = uniqid();
+        $post->title = $request->input('title'); //put as a defualt slug
+        $post->{'sub-title'} = $request->input('sub-title');
+        $post->slug = $request->input('slug');
         $post->body = $request->input('body');
+        $post->category = $request->input('category');
+        $post->references = $request->input('references');
+        $post->publish = $request->input('publish');
+        $post->cover_image = $fileNameToStore;
+        $post->date = Carbon::now()->toFormattedDateString();
         $post->save();
 
         return redirect('/admins')->with('success', 'Post Created');
@@ -94,8 +131,15 @@ class PostController extends Controller
             'body' => 'required',
         ]);
         $post = Post::find($id);
-        $post->title = $request->input('title');
+        $post->body = $request->input('id');
+        $post->title = $request->input('title'); //put as a defualt slug
+        $post->body = $request->input('sub-title');
+        $post->body = $request->input('slug');
         $post->body = $request->input('body');
+        $post->body = $request->input('category');
+        $post->body = $request->input('reference');
+        $post->body = $request->input('publish');
+        $post->body = $request->input('date');
         $post->save();
 
         return redirect('/admins')->with('Success', 'Post Updated');

@@ -11,11 +11,12 @@ class pagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function article($title)
+    public function article($slug)
     {
         //
-        $post = Post::find($title);
-        return view('posts.single')->with('title', $title)->with('post', $post);
+        // $post =  Post::find($slug); 
+        $post = Post::where('slug', '=', $slug)->take(1)->get();
+        return view('posts.single')->with('post', $post[0]);
     }
     /**
      * Display a listing of the resource.
@@ -24,7 +25,7 @@ class pagesController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'desc')->paginate(2);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(20);
         return view('posts.index')->with('posts', $posts);
     }
 

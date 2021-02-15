@@ -3,7 +3,7 @@
         <div class="row mb-5">
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="logo"><a href="#">Javascript<span>dev</span>.</a></h2>
+                    <h2 class="logo"><a href="#">Reference<span>dev</span>.</a></h2>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
                         live the blind texts.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
@@ -16,57 +16,25 @@
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4 latest-footer">
                     <h2 class="ftco-heading-2">Latest</h2>
+                    @foreach ($articles as $article)
                     <div class="block-21 mb-4 d-flex">
-                        <a class="img mr-4 rounded" style="background-image: url('/images/image_1.jpg');"></a>
+                        <a href="/article/{!!$article->slug!!}" class="img mr-4 rounded" style='background-image: url("/storage/cover_images/{{$article->cover_image}}");'></a>
                         <div class="text">
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                            <h3 class="heading"><a href="/article/{!!$article->slug!!}">{!!$article->title!!}</a></h3>
                             <div class="meta">
                                 <div>
-                                    <a href="#"></span> Oct. 16, 2019</a>
+                                    <a></span>{!!$article->date!!}</a>
                                 </div>
                                 <div>
-                                    <a href="#"></span> Admin</a>
+                                    <a></span> Admin</a>
                                 </div>
-                                <div>
-                                    <a href="#"></span> 19</a>
-                                </div>
+                                {{-- <div>
+                                    <a></span> 19</a>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
-                    <div class="block-21 mb-4 d-flex">
-                        <a class="img mr-4 rounded" style="background-image: url('/images/image_2.jpg');"></a>
-                        <div class="text">
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                            <div class="meta">
-                                <div>
-                                    <a href="#"></span> Oct. 16, 2019</a>
-                                </div>
-                                <div>
-                                    <a href="#"></span> Admin</a>
-                                </div>
-                                <div>
-                                    <a href="#"></span> 19</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block-21 mb-4 d-flex">
-                        <a class="img mr-4 rounded" style="background-image: url('/images/image_2.jpg');"></a>
-                        <div class="text">
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                            <div class="meta">
-                                <div>
-                                    <a href="#"></span> Oct. 16, 2019</a>
-                                </div>
-                                <div>
-                                    <a href="#"></span> Admin</a>
-                                </div>
-                                <div>
-                                    <a href="#"></span> 19</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <div class="col-md">
@@ -114,19 +82,10 @@
                         <li class="itm">
                             <a><span
                                 class="ion-ios-arrow-forward mr-3"></span>Articles</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Sub-1</a></li>
-                                    <li><a href="#">Sub-2</a></li>
-                                    <li><a href="#">Sub-3</a></li>
-                                    <li><a href="#">Sub-1</a></li>
-                                    <li><a href="#">Sub-2</a></li>
-                                    <li><a href="#">Sub-3</a></li>
-                                    <li><a href="#">Sub-1</a></li>
-                                    <li><a href="#">Sub-2</a></li>
-                                    <li><a href="#">Sub-3</a></li>
-                                    <li><a href="#">Sub-1</a></li>
-                                    <li><a href="#">Sub-2</a></li>
-                                    <li><a href="#">Sub-3</a></li>
+                                <ul class="dropdown caps">
+                                    @foreach ($categories as $category)
+                                    <li><a href="/articles/{!!$category->category!!}">{!!$category->category!!}</a></li>
+                                    @endforeach
                                 </ul>
                         </li>
                         <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Contact</a>

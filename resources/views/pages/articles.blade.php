@@ -6,13 +6,12 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate pb-5 text-center">
-                <h1 class="mb-3 caps bread">{!!$name!!}</h1>
+                <h1 id="lh" class="mb-3 caps bread">{!!$name!!}</h1>
                 <p class="breadcrumbs">
                     <span class="mr-2">
                         <a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a>
-                    </span> 
+                    </span>
                     <span>Articles <i class="ion-ios-arrow-forward"></i></span>
-                   
                     <span class="caps">{!!$name!!} <i class="ion-ios-arrow-forward"></i></span>
                 </p>
             </div>

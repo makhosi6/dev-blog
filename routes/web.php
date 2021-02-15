@@ -19,8 +19,8 @@ Route::get('/admins/home', function () {
 });
 //
 Route::get('/', 'pagesController@index');
-Route::get('/articles/{slugs}', 'pagesController@articles');
-Route::get('/article/{title}', 'pagesController@article');
+Route::get('/articles/{slug}', 'pagesController@articles');
+Route::get('/article/{slug}', 'pagesController@article');
 Route::get('/about', 'pagesController@about');
 Route::get('/contact','pagesController@contact');
 
