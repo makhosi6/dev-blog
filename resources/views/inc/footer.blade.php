@@ -23,10 +23,10 @@
                             <h3 class="heading"><a href="/article/{!!$article->slug!!}">{!!$article->title!!}</a></h3>
                             <div class="meta">
                                 <div>
-                                    <a></span>{!!$article->date!!}</a>
+                                    <a>{!!$article->date!!}</a>
                                 </div>
                                 <div>
-                                    <a></span> Admin</a>
+                                    <a class="caps">{!!$article->category!!}</a>
                                 </div>
                                 {{-- <div>
                                     <a></span> 19</a>
@@ -41,9 +41,7 @@
                 <div class="ftco-footer-widget mb-4 ml-md-5">
                     <h2 class="ftco-heading-2">Information</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Home</a>
-                        </li>
-                        <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>About</a>
+                        <li><a href="/" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Home</a>
                         </li>
                         {{-- <li><a href="#" class="py-1 d-block"><span
                                     class="ion-ios-arrow-forward mr-3"></span>Articles</a></li> --}}
@@ -88,7 +86,9 @@
                                     @endforeach
                                 </ul>
                         </li>
-                        <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Contact</a>
+                        <li><a href="/about" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>About</a>
+                        </li>
+                        <li><a href="/contact" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Contact</a>
                         </li>
                     </ul>
                 </div>

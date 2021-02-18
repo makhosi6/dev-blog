@@ -53,9 +53,9 @@
                         <div class="text">
                             <h3 class="heading"><a href="/article/{!!$article->slug!!}">{!!$article->title!!}</a></h3>
                             <div class="meta">
-                                <div><a href="#"><span class="icon-calendar"></span>{!!$article->date!!}</a></div>
-                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                                <div><a class="caps">{!!$article->date!!}</a></div>
+                                <div><a class="caps">{!!$article->category!!}</a></div>
+                                {{-- <div><a href="#"></span> 19</a></div> --}}
                             </div>
                         </div>
                     </div>

@@ -19,7 +19,7 @@ class Post extends Model
      * The attributes that are mass assignable.
      *
      * @var array
-     */
+    
     protected $fillable = [
         'title',
         'sub-title',
@@ -30,5 +30,5 @@ class Post extends Model
         'publish',
         'date'  
     ];
-    
+     */
 }

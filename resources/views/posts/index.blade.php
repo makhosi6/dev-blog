@@ -17,7 +17,7 @@
                                     Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
                                     at the coast of the Semantics, a large language ocean.</p>
                                 <div class="mouse">
-                                    <a href="#" class="mouse-icon">
+                                    <a href="#articles" class="mouse-icon">
                                         <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
                                     </a>
                                 </div>
@@ -30,7 +30,7 @@
     </div>
 
 </section>
-<section class="ftco-section bg-light">
+<section id="articles" class="ftco-section bg-light">
     <div class="container">
         <div class="row d-flex body-wrapper">
             @if (count($posts)> 0)
@@ -44,7 +44,7 @@
                         <div class="topper d-flex align-items-center">
                             <div class="one py-2 pl-3 pr-1 align-self-stretch">
                                 <span class="day">
-                                    {{ \Carbon\Carbon::createFromTimestamp(strtotime($post->created_at))->format('d')}}
+                                    {{\Carbon\Carbon::createFromTimestamp(strtotime($post->created_at))->format('d')}}
                                 </span>
                             </div>
                             <div class="two pl-0 pr-3 py-2 align-self-stretch">
@@ -59,13 +59,16 @@
                         <a href="/articles/{!!$post->category!!}">
                             <span class="subheading mt-20">{!!$post->category!!}</span>
                         </a>
-                        <h3 class="heading mb-3"><a href="/article/{!!$post->slug!!}">{!!$post->title!!}</a></h3>
+                        <h3 class="heading mb-3"><a href="/article/{!!$post->slug!!}">{!!$post->title!!} - {!!$post->id!!}</a></h3>
                         <p class="ellipsis" title="{!!$post->{'sub-title'}!!}">{!!$post->{'sub-title'}!!}</p>
                         <p><a href="/article/{!!$post->slug!!}" class="btn-custom"><span class="ion-ios-arrow-round-forward mr-3"></span>Read
                                 more</a></p>
                     </div>
                 </div>
             </div>
+            <code>
+                {{$post}}
+            </code>
             @endforeach
 
             @else

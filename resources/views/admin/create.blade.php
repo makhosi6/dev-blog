@@ -24,9 +24,9 @@
     {!! Form::open(['action' => 'PostController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
     <div class="form-group">
         {{Form::label('title', 'Title')}}
-        {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
+        {{Form::text('title', '', ['class' => 'form-control','placeholder' => 'Title'])}}
         <b class="limit">
-            Character Limit: <span class="title-output">0</span>/ <span class="title-total">44</span>
+            Character Limit: <span class="title-output">0</span>/<span class="title-total">44</span>
         </b>
     </div>
         <div class="form-group">
@@ -38,13 +38,12 @@
             {{Form::text('sub-title', '', ['class' => 'form-control', 'placeholder' => 'Sub-title'])}}
         </div>
         <b class="limit">
-            Character Limit: <span class="sub-output">0</span>/ <span class="sub-total">72</span>
+            Character Limit: <span class="sub-output">0</span>/<span class="sub-total">72</span>
         </b>
         <div class="form-group">
             {{Form::label('category', 'Category')}}
             {{Form::text('category', '', ['class' => 'form-control', 'placeholder' => 'Category'])}}
         </div>
-        {{Form::text('username')}}
         <div class="form-group">
             {{Form::label('body', 'Body')}}
             {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}

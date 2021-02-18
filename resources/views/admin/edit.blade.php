@@ -24,16 +24,43 @@
     <div class="container">
     <h1>Edit Post</h1>
     {!! Form::open(['action' => ['PostController@update', $post->id ], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+    <div class="form-group">
+        {{Form::label('title', 'Title')}}
+        {{Form::text('title', $post->title, ['class' => 'form-control', 'placeholder' => 'Title'])}}
+        <b class="limit">
+            Character Limit: <span class="title-output">0</span>/ <span class="title-total">44</span>
+        </b>
+    </div>
         <div class="form-group">
-            {{Form::label('title', 'Title')}}
-            {{Form::text('title', $post->title, ['class' => 'form-control', 'placeholder' => 'Title'])}}
+            {{Form::label('slug', 'Slug')}}
+            {{Form::text('slug', $post->slug , ['class' => 'form-control', 'placeholder' => 'Slug'])}}
+        </div>
+        <div class="form-group">
+            {{Form::label('sub-title', 'Sub-title')}}
+            {{Form::text('sub-title', $post->{'sub-title'}, ['class' => 'form-control', 'placeholder' => 'Sub-title'])}}
+        </div>
+        <b class="limit">
+            Character Limit: <span class="sub-output">0</span>/ <span class="sub-total">72</span>
+        </b>
+        <div class="form-group">
+            {{Form::label('category', 'Category')}}
+            {{Form::text('category', $post->category , ['class' => 'form-control', 'placeholder' => 'Category'])}}
         </div>
         <div class="form-group">
             {{Form::label('body', 'Body')}}
-            {{Form::textarea('body', $post->body, ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
+            {{Form::textarea('body', $post->body , ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
+        </div>
+      
+        <div class="form-group">
+            {{Form::label('references', 'References')}}
+            {{Form::textarea('references', $post->references , ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'References Text'])}}
         </div>
         <div class="form-group">
             {{Form::file('cover_image')}}
+        </div>
+        <div class="form-group">
+            {{Form::label('publish', 'Publish')}} <br>
+           {{ Form::select('publish', array('1' => 'Publish', '0' => 'Draft'), $post->publish)}}
         </div>
         {{Form::hidden('_method', 'PUT')}}
         {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}

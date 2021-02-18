@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use Exception;
 
 class PostController extends Controller
 {
@@ -76,7 +77,7 @@ class PostController extends Controller
         }
 
         $post = new Post;
-        $post->id = uniqid();
+        $post->post_id = uniqid('id_',true);
         $post->title = $request->input('title'); //put as a defualt slug
         $post->{'sub-title'} = $request->input('sub-title');
         $post->slug = $request->input('slug');
@@ -97,11 +98,16 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
         //
-        $post = Post::find($id);
-        return view('admin.single')->with('title', $id)->with('post', $post);
+        try {
+            $post = Post::where('slug', '=', $slug)->take(1)->get();
+        return view('admin.single')->with('title', $slug)->with('post', $post);
+        } catch (\Exception $th) {
+            return view('errors.404');
+        }
+        
     }
 
     /**
@@ -113,8 +119,13 @@ class PostController extends Controller
     public function edit($id)
     {
         //
-        $post = Post::find($id);
-        return view('admin.edit')->with('post', $post);
+        try {
+            $post = Post::find($id);
+            return view('admin.edit')->with('post', $post);
+        } catch (\Exception $th) {
+          return view('errors.404');
+        }
+       
     }
 
     /**
@@ -133,13 +144,13 @@ class PostController extends Controller
         $post = Post::find($id);
         $post->body = $request->input('id');
         $post->title = $request->input('title'); //put as a defualt slug
-        $post->body = $request->input('sub-title');
+        // $post->body = $request->input('sub-title');
         $post->body = $request->input('slug');
-        $post->body = $request->input('body');
-        $post->body = $request->input('category');
-        $post->body = $request->input('reference');
-        $post->body = $request->input('publish');
-        $post->body = $request->input('date');
+        // $post->body = $request->input('body');
+        // $post->body = $request->input('category');
+        // $post->body = $request->input('reference');
+        // $post->body = $request->input('publish');
+        // $post->body = $request->input('date');
         $post->save();
 
         return redirect('/admins')->with('Success', 'Post Updated');
@@ -153,7 +164,6 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
         $post = Post::find($id);
         $post->delete();
         return redirect('/admins')->with('Success', 'Post Deleted');
