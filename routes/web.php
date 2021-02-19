@@ -1,4 +1,7 @@
 <?php
+
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,6 +20,11 @@ use App\Http\Controllers\pagesController as Pages;
 Route::get('/admins/home', function () {
     return view('welcome');
 });
+Route::get('/user', function (Request $request) {
+    return $request->user();
+})->middleware('auth');
+
+Route::get('/dashboard', 'DashboardController@index');
 //
 Route::get('/', 'pagesController@index');
 Route::get('/articles/{slug}', 'pagesController@articles');

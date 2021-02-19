@@ -28,9 +28,6 @@
                                 <div>
                                     <a class="caps">{!!$article->category!!}</a>
                                 </div>
-                                {{-- <div>
-                                    <a></span> 19</a>
-                                </div> --}}
                             </div>
                         </div>
                     </div>

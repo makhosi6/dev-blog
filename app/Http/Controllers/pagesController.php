@@ -30,7 +30,7 @@ class pagesController extends Controller
     public function index()
     {
         
-        $posts = Post::orderBy('created_at', 'desc')->paginate(20);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(15);
         return view('posts.index')->with('posts', $posts);
     }
 
@@ -43,8 +43,8 @@ class pagesController extends Controller
     public function articles($params)
     {
         try {
-            $posts = DB::table('posts')->where('category', '=', $params)->paginate(1);
-            return view('pages.articles')->with('posts', $posts, )->with('name', $params);
+            $posts = DB::table('posts')->where('category', '=', $params)->paginate(15);
+            return view('posts.articles')->with('posts', $posts, )->with('name', $params);
         } catch (\Exception $th) {
             return view('errors.500');
         }

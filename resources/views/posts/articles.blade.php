@@ -24,7 +24,7 @@
             <div class="col-md-12 body-wrapper">
                 @if (count($posts)> 0)
                 @foreach ($posts as $post)
-                <div class="case">
+                <article class="case">
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-xl-8 d-flex">
                             <a href="/article/{!!$post->slug!!}" class="img w-100 mb-3 mb-md-0"
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
                 @endforeach
 
                 @else

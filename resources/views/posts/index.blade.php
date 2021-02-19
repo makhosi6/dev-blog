@@ -35,7 +35,8 @@
         <div class="row d-flex body-wrapper">
             @if (count($posts)> 0)
             @foreach ($posts as $post)
-            <div class="col-md-4 d-flex ftco-animate">
+            
+            <article class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
                     <a href="/article/{!!$post->slug!!}" class="block-20"
                         style='background-image: url("/storage/cover_images/{{$post->cover_image}}");'>
@@ -65,7 +66,7 @@
                                 more</a></p>
                     </div>
                 </div>
-            </div>
+            </article>
             @endforeach
 
             @else

@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Image;
-use Exception;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -18,10 +22,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
-        $posts = Post::orderBy('created_at', 'desc')->paginate(2);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(15);
         return view('admin.index')->with('posts', $posts);
-  
+
     }
 
     /**
@@ -77,8 +80,8 @@ class PostController extends Controller
 
         $post = new Post;
         $post->title = $request->input('title'); //put as a defualt slug
-        $post->post_id = uniqid('art_',true);
-        $post->user_id = 666;
+        $post->post_id = uniqid('art_', true);
+        $post->user_id = auth()->user()->id;
         $post->{'sub-title'} = $request->input('sub-title');
         $post->slug = $request->input('slug');
         $post->body = $request->input('body');
@@ -103,11 +106,11 @@ class PostController extends Controller
         //
         try {
             $post = Post::where('slug', '=', $slug)->take(1)->get()[0];
-        return view('admin.single')->with('post', $post);
+            return view('admin.single')->with('post', $post);
         } catch (\Exception $th) {
             return view('errors.404');
         }
-        
+
     }
 
     /**
@@ -120,12 +123,12 @@ class PostController extends Controller
     {
         //
         try {
-            $post = Post::where('post_id',$id)->get()[0];
+            $post = Post::where('post_id', $id)->get()[0];
             return view('admin.edit')->with('post', $post);
         } catch (\Exception $th) {
-          return view('errors.404');
+            return view('errors.404');
         }
-       
+
     }
 
     /**
@@ -141,9 +144,9 @@ class PostController extends Controller
             'title' => 'required',
             'body' => 'required',
         ]);
-        $post = Post::where('post_id',$id)->get()[0];
-           // Handle File Upload
-           if($request->hasFile('cover_image')){
+        $post = Post::where('post_id', $id)->get()[0];
+        // Handle File Upload
+        if ($request->hasFile('cover_image')) {
             // Get filename with the extension
             $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
             // Get just filename
@@ -151,28 +154,28 @@ class PostController extends Controller
             // Get just ext
             $extension = $request->file('cover_image')->getClientOriginalExtension();
             // Filename to store
-            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $fileNameToStore = $filename . '_' . time() . '.' . $extension;
             // Upload Image
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
             // Delete file if exists
-            Storage::delete('public/cover_images/'.$post->cover_image);
-		
-	   //Make thumbnails
-	    $thumbStore = 'thumb.'.$filename.'_'.time().'.'.$extension;
+            Storage::delete('public/cover_images/' . $post->cover_image);
+
+            //Make thumbnails
+            $thumbStore = 'thumb.' . $filename . '_' . time() . '.' . $extension;
             $thumb = Image::make($request->file('cover_image')->getRealPath());
             $thumb->resize(80, 80);
-            $thumb->save('storage/cover_images/'.$thumbStore);
-		
+            $thumb->save('storage/cover_images/' . $thumbStore);
+
         }
         // $post->id = $request->input('id');
-        $post->title = $request->input('title'); 
+        $post->title = $request->input('title');
         $post->{'sub-title'} = $request->input('sub-title');
         $post->slug = $request->input('slug');
         $post->body = $request->input('body');
         $post->category = $request->input('category');
-        $post->references= $request->input('references');
+        $post->references = $request->input('references');
         $post->publish = $request->input('publish');
-        if($request->hasFile('cover_image')){
+        if ($request->hasFile('cover_image')) {
             $post->cover_image = $fileNameToStore;
         }
         $post->save();
@@ -188,7 +191,7 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        $post = Post::where('post_id',$id)->get()[0];
+        $post = Post::where('post_id', $id)->get()[0];
         $post->delete();
         return redirect('/admins')->with('Success', 'Post Deleted');
     }

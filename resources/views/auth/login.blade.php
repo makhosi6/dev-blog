@@ -71,12 +71,17 @@
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
+                                </button>                              
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                                Forgot Your Password?
+                            </a>
+                            or
+                            <a class="btn btn-link" href="/register">
+                                Sign up
+                            </a>
                         </div>
                     </form>
                 </div>

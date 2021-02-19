@@ -52,9 +52,7 @@
                         <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
                     </div>
                 </form>
-
             </div>
-
             <div class="col-lg-6 d-flex">
                 {{-- <div id="map" class="bg-white">
                     
