@@ -17,7 +17,7 @@
                                     Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
                                     at the coast of the Semantics, a large language ocean.</p>
                                 <div class="mouse">
-                                    <a href="#" class="mouse-icon">
+                                    <a href="#articles" class="mouse-icon">
                                         <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
                                     </a>
                                 </div>
@@ -30,43 +30,60 @@
     </div>
 
 </section>
-<section class="ftco-section bg-light">
+<section id="articles" class="ftco-section bg-light">
     <div class="container">
         <div class="row d-flex body-wrapper">
             @if (count($posts)> 0)
             @foreach ($posts as $post)
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="/admins/{{$post->id}}" class="block-20"
-                        style="background-image: url('./images/image_9.jpg');">
+                    <a href="/admins/{!!$post->slug!!}" class="block-20"
+                        style='background-image: url("/storage/cover_images/{{$post->cover_image}}");'>
                     </a>
                     <div class="text p-4 float-right d-block">
                         <div class="topper d-flex align-items-center">
                             <div class="one py-2 pl-3 pr-1 align-self-stretch">
-                                <span class="day">00</span>
+                                <span class="day">
+                                    {{ \Carbon\Carbon::createFromTimestamp(strtotime($post->created_at))->format('d')}}
+                                </span>
                             </div>
                             <div class="two pl-0 pr-3 py-2 align-self-stretch">
-                                <span class="yr">2019</span>
-                                <span class="mos">October</span>
+                                <span class="yr">
+                                    {{ \Carbon\Carbon::createFromTimestamp(strtotime($post->created_at))->format('Y')}}
+                                </span>
+                                <span class="mos">
+                                    {{\Carbon\Carbon::createFromTimestamp(strtotime($post->created_at))->format('M')}}
+                                </span>
                             </div>
                         </div>
-                        <span class="subheading mt-20">Application</span>
-                        <h3 class="heading mb-3"><a href="#">All you want to know about industrial laws</a></h3>
-                        <p>A small river named Duden flow by their place and supplies it with the necessary regelialia.
-                            - {!!$post->id!!}</p>
-                        <p>
-                            <a href="#" class="btn-custom"><span class="ion-ios-arrow-round-forward mr-3"></span>Read
-                                more
-                            </a>
-                        </p>
+                        <a href="/articles/{!!$post->category!!}">
+                            <span class="subheading mt-20">{!!$post->category!!}</span>
+                        </a>
+                        <h3 class="heading mb-3"><a href="/admins/{!!$post->slug!!}">{!!$post->title!!}</a></h3>
+                        <p class="ellipsis" title="{!!$post->{'sub-title'}!!}">{!!$post->{'sub-title'}!!}</p>
+                        <p><a href="/admins/{!!$post->slug!!}" class="btn-custom"><span
+                                    class="ion-ios-arrow-round-forward mr-3"></span>Read
+                                more</a></p>
+                        <div class="grd-btn">
+                            <span>
+                                <a href="/admins/{{$post->post_id}}/edit" class="btn-custom"><span
+                                    class="ion-ios-create mr-3"></span>Edit</a>
+                            </span>
+                            <span>
+                                {!!Form::open(['action' => ['PostController@destroy', $post->post_id], 'method' => 'POST',
+                                'class' => 'pull-right'])!!}
+                                {{Form::hidden('_method', 'DELETE')}}
+                                <span class="ion-ios-trash mr-3"></span>
+                                {{Form::submit('DELETE', ['class' => 'plain'])}}
+                                {!!Form::close()!!}
+                            </span>
+                        </div>
+
                     </div>
                 </div>
-                {{-- {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
-                {{Form::hidden('_method', 'DELETE')}}
-                {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-            {!!Form::close()!!} --}}
             </div>
             @endforeach
+
             @else
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">

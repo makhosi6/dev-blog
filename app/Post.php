@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    //
-     /**
+    // Table Name
+    protected $table = 'posts';
+    // Primary Key
+    // public $primaryKey = 'post_id';
+    // Timestamps
+    public $timestamps = true;
+       /**
      * The attributes that should be cast.
      *
      * @var array
@@ -15,20 +20,8 @@ class Post extends Model
     protected $casts = [
         'publish' => 'boolean',
     ];
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'title',
-        'sub-title',
-        'slug',
-        'body',
-        'category',
-        'references',
-        'publish',
-        'date'  
-    ];
-    
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

@@ -60,7 +60,24 @@ h1#lh {
 .alert{
   margin-bottom: 0 !important;
 }
-
+.plain:hover, .plain:focus{
+  background-color: #f8f9fa;
+}
+.plain{
+  color: #00000066 !important;
+  letter-spacing: 1px;
+  font-size: 12px;
+  border: 0 !important;
+  background-color: #f8f9fa;
+  outline: none !important;
+}
+.grd-btn{
+  display: flex !important;
+  justify-content: space-between;
+}
+/* .grd-btn:last-child >  {
+ display: block !important;
+} */
 /* 
 .hero-wrap .overlay {
   background: -webkit-gradient(linear, left top, right top, from(#0072ff), to(#00d4ff)) !important;

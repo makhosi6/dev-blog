@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CoverImage extends Migration
+class AddCoverImageToPosts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,6 @@ class CoverImage extends Migration
      */
     public function up()
     {
-        //
         Schema::table('posts', function($table){
             $table->string('cover_image');
         });
@@ -26,9 +25,8 @@ class CoverImage extends Migration
      */
     public function down()
     {
-        //
         Schema::table('posts', function($table){
-            // $table->dropColumn('cover_image');
+            $table->dropColumn('cover_image');
         });
     }
 }

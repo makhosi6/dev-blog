@@ -132,9 +132,7 @@
 		<![endif]-->
 
 </head>
-
 <body>
-
     <div id="notfound">
         <div class="notfound">
             <div class="notfound-404">
@@ -147,6 +145,4 @@
     </div>
 
 </body>
-<!-- This templates was made by Colorlib (https://colorlib.com) -->
-
 </html>

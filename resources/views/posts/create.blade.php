@@ -41,7 +41,6 @@
             {{Form::label('category', 'Category')}}
             {{Form::text('category', '', ['class' => 'form-control', 'placeholder' => 'Category'])}}
         </div>
-        {{Form::text('username')}}
         <div class="form-group">
             {{Form::label('body', 'Body')}}
             {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}

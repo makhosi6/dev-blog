@@ -9,15 +9,13 @@ use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /*
-     *
+    /**
      * Bootstrap any application services.
      *
      * @return void
      */
     public function boot()
     {
-        //
         Schema::defaultStringLength(191);
         //
         $categories = Post::orderBy('created_at', 'desc')->take(10)->get(); 
