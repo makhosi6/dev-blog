@@ -3,20 +3,42 @@
 @push('post-meta')
 <title>{!!$post->title!!}</title>
 <meta name="description" content="{!!$post->title!!}">
+<meta name="twitter:title" content={!!$post->title!!}>
+<meta name="twitter:description" content={!!$post->{'sub-title'}!!}>
+<meta name="twitter:image" content="http://example.com/storage/cover_images/{!!$post->cover_image!!}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://example.com/article/{!!$post->slug!!}">
+<meta property="og:title" content={!!$post->title!!}>
+<meta property="og:description" content={!!$post->{'sub-title'}!!}>
+<meta property="og:image" content="http://example.com/storage/cover_images/{{$post->cover_image}}">
+<meta property="og:url" content="http://example.com/article/{!!$post->slug!!}">
+<meta property="og:type" content="website" />
 @endpush
 @push('non-index')
 <meta name="robots" content="index, follow">
 @endpush
+<article itemscope itemtype="https://schema.org/Article">
 <header class="hero-wrap hero-wrap-2 js-fullheight"
     style="background-image: url('/images/max247rduzij-qAjJk-un3BI.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate pb-5 text-center">
-                <h1 id="lh" title="{!!$post->title!!}" class="mb-3 bread">{!!$post->title!!}</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a>Home <i class="ion-ios-arrow-forward"></i></a></span> <span
-                        class="mr-2"><a>Article <i class="ion-ios-arrow-forward"></i></a></span>
-                    <span>{!!$post->title!!} <i class="ion-ios-arrow-forward"></i></span></p>
+                <h1 id="lh" itemprop="headline" title="{!!$post->title!!}" class="mb-3 bread">{!!$post->title!!}</h1>
+                <p itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumbs">
+                    <span itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem" class="mr-2">
+                        <a itemprop="item" href="/">Home <i class="ion-ios-arrow-forward"></i></a>
+                    </span> 
+                    <span itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem"  class="mr-2">
+                        <a itemprop="item" href="/article/{!!$post->slug!!}" >Article <i class="ion-ios-arrow-forward"></i></a>
+                    </span>
+                    <span itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem"> 
+                        <a itemprop="item" href="/article/{!!$post->slug!!}"> {!!$post->title!!} </a><i class="ion-ios-arrow-forward"></i>
+                    </span>
+                </p>
             </div>
         </div>
     </div>
@@ -26,13 +48,13 @@
         <div class="row">
             <div class="col-lg-8 ftco-animate">
                 <p class="mb-5">
-                    <img src="/storage/cover_images/{{$post->cover_image}}" alt="{{$post->title}}" class="img-fluid">
+                    <img itemprop="image" src="/storage/cover_images/{{$post->cover_image}}" alt="{{$post->title}}" class="img-fluid">
                 </p>
-                <h2 class="mb-3">{!!$post->{'sub-title'}!!}</h2>
-                <section class="body">
+                <h2 itemprop="alternativeHeadline" class="mb-3">{!!$post->{'sub-title'}!!}</h2>
+                <section itemprop="articleBody" class="body">
                     {!!$post->body!!}
                 </section>
-                <section class="references">
+                <section itemprop="citation" class="references">
                     {!!$post->references!!}
                 </section>
             </div>
@@ -86,6 +108,7 @@
         </div>
     </div>
 </div>
+</article>
 @push('json+ld')
 <script type="application/ld+json">
     "@context": "https://schema.org/",
@@ -101,6 +124,12 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "url": "http://example.com/",
+        "logo": {
+            "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
+            "width": "512",
+            "@context": "http://schema.org",
+            "@type": "ImageObject"
+          },
         "sameAs": [
             "https://twitter.com/floriansimeth",
         ]

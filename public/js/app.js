@@ -22296,8 +22296,8 @@ jQuery.Deferred.exceptionHook = function( error, stack ) {
 
 	// Support: IE 8 - 9 only
 	// Console exists when dev tools are open, which can happen at any time
-	if ( window.console && window.console.warn && error && rerrorNames.test( error.name ) ) {
-		window.console.warn( "jQuery.Deferred exception: " + error.message, error.stack, stack );
+	if ( window.console && window.console.error && error && rerrorNames.test( error.name ) ) {
+		window.console.error( "jQuery.Deferred exception: " + error.message, error.stack, stack );
 	}
 };
 
@@ -33238,7 +33238,7 @@ var formatComponentName = (noop);
 
   tip = function (msg, vm) {
     if (hasConsole && (!config.silent)) {
-      console.warn("[Vue tip]: " + msg + (
+      console.error("[Vue tip]: " + msg + (
         vm ? generateComponentTrace(vm) : ''
       ));
     }
@@ -38992,9 +38992,9 @@ function createPatchFunction (backend) {
                 !hydrationBailed
               ) {
                 hydrationBailed = true;
-                console.warn('Parent: ', elm);
-                console.warn('server innerHTML: ', i);
-                console.warn('client innerHTML: ', elm.innerHTML);
+                console.error('Parent: ', elm);
+                console.error('server innerHTML: ', i);
+                console.error('client innerHTML: ', elm.innerHTML);
               }
               return false
             }
@@ -39017,8 +39017,8 @@ function createPatchFunction (backend) {
                 !hydrationBailed
               ) {
                 hydrationBailed = true;
-                console.warn('Parent: ', elm);
-                console.warn('Mismatching childNodes vs. VNodes: ', elm.childNodes, children);
+                console.error('Parent: ', elm);
+                console.error('Mismatching childNodes vs. VNodes: ', elm.childNodes, children);
               }
               return false
             }

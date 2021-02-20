@@ -8,9 +8,19 @@
     <title>Reference.dev | home</title>
     <meta name="description" content="Far far away, behind the word mountains, far from the countries Vokalia and
     Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
-    at the coast of the Semantics, a large language ocean.">
+    at the coast of the Semantics, a large language ocean." />
+    <meta property="og:title" content="European Travel Destinations">
+    <meta property="og:description" content="Offering tour packages for individuals or groups.">
+    <meta property="og:image" content="http://example.com/thumbnail.jpg">
+    <meta property="og:url" content="http://example.com/">
+    <meta property="og:type" content="website" />
+    <meta name="twitter:title" content="European Travel Destinations ">
+    <meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
+    <meta name="twitter:image" content=" http://example.com/thumbnail.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://example.com/">
     @endpush
-    
+
     <div class="hero-wrap js-fullheight" style="background-image: url('images/max247rduzij-qAjJk-un3BI.jpg');"
         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
@@ -46,13 +56,15 @@
             @if (count($posts)> 0)
             @foreach ($posts as $post)
 
-            <article class="col-md-4 d-flex ftco-animate">
+            <article itemscope itemtype="https://schema.org/Article" class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="/article/{!!$post->slug!!}" class="block-20" role="img" aria-label={!!$post->title!!}
+                    <a itemprop="image" href="/article/{!!$post->slug!!}" class="block-20" role="img"
+                        aria-label={!!$post->title!!}
                         style='background-image: url("/storage/cover_images/{{$post->cover_image}}");'>
                     </a>
                     <div class="text p-4 float-right d-block">
-                        <time datetime="{!!$post->created_at!!}" class="topper d-flex align-items-center">
+                        <time itemprop="datePublished" datetime="{!!$post->created_at!!}"
+                            class="topper d-flex align-items-center">
                             <div class="one py-2 pl-3 pr-1 align-self-stretch">
                                 <span class="day">
                                     {{\Carbon\Carbon::createFromTimestamp(strtotime($post->created_at))->format('d')}}
@@ -68,11 +80,13 @@
                             </div>
                         </time>
                         <a href="/articles/{!!$post->category!!}">
-                            <span class="subheading mt-20">{!!$post->category!!}</span>
+                            <span itemprop="category" class="subheading mt-20">{!!$post->category!!}</span>
                         </a>
-                        <h3 class="heading mb-3"><a href="/article/{!!$post->slug!!}">{!!$post->title!!}</a></h3>
-                        <p class="ellipsis" title="{!!$post->{'sub-title'}!!}">{!!$post->{'sub-title'}!!}</p>
-                        <p><a href="/article/{!!$post->slug!!}" class="btn-custom"><span
+                        <h3 itemprop="headline" class="heading mb-3"><a
+                                href="/article/{!!$post->slug!!}">{!!$post->title!!}</a></h3>
+                        <p itemprop="alternativeHeadline" class="ellipsis" title="{!!$post->{'sub-title'}!!}">
+                            {!!$post->{'sub-title'}!!}</p>
+                        <p><a itemprop="url" href="/article/{!!$post->slug!!}" class="btn-custom"><span
                                     class="ion-ios-arrow-round-forward mr-3"></span>Read
                                 more</a></p>
                     </div>
@@ -107,6 +121,12 @@
         "@type": "WebSite",
         "breadcrumb": "Home",
         "url": "http://example.com/",
+        "logo": {
+            "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
+            "width": "512",
+            "@context": "http://schema.org",
+            "@type": "ImageObject"
+          },
         "mainEntityOfPage": "https://example.com",
         "creator": {
             "@context": "https://schema.org",
@@ -157,6 +177,12 @@
                     "@context": "https://schema.org",
                     "@type": "WebSite",
                     "url": "http://example.com/",
+                    "logo": {
+                        "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
+                        "width": "512",
+                        "@context": "http://schema.org",
+                        "@type": "ImageObject"
+                      },
                     "sameAs": [
                         "https://twitter.com/floriansimeth",
                     ]

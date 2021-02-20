@@ -101,7 +101,7 @@
                             </li>
                             <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
                             <li><a href="#"><span class="icon icon-envelope"></span><span
-                                        class="text">info@yourdomain.com</span></a></li>
+                                        class="text">hey@yourdomain.com</span></a></li>
                         </ul>
                     </div>
                 </div>

@@ -1,15 +1,26 @@
 @extends('layout.app')
 @section('content')
 @push('page-meta')
-<title>Reference.dev | home</title>
+<title>Reference.dev | About</title>
 <meta name="description" content="Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
 at the coast of the Semantics, a large language ocean.">
+
+<meta property="og:title" content="European Travel Destinations">
+<meta property="og:description" content="Offering tour packages for individuals or groups.">
+<meta property="og:image" content="http://example.com/thumbnail.jpg">
+<meta property="og:url" content="http://example.com/">
+<meta property="og:type" content="website" />
+
+<meta name="twitter:title" content="European Travel Destinations ">
+<meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
+<meta name="twitter:image" content=" http://example.com/thumbnail.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="https://example.com/">
 @endpush
 @push('non-index')
-    <meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 @endpush
-
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/max247rduzij-qAjJk-un3BI.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -76,6 +87,12 @@ at the coast of the Semantics, a large language ocean.">
         "@type": "WebSite",
         "breadcrumb": "Home",
         "url": "http://example.com/",
+        "logo": {
+            "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
+            "width": "512",
+            "@context": "http://schema.org",
+            "@type": "ImageObject"
+          },
         "mainEntityOfPage": "https://example.com",
         "creator": {
             "@context": "https://schema.org",

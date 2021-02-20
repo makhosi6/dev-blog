@@ -19,10 +19,10 @@ use App\Http\Controllers\pagesController as Pages;
 
 Route::get('/admins/home', function () {
     return view('welcome');
-});
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth');
+})->middleware('addheaders');
+// Route::get('/user', function (Request $request) {
+//     return $request->user();
+// })->middleware('auth');
 
 Route::get('/dashboard', 'DashboardController@index');
 //

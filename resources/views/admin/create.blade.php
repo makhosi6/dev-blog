@@ -48,6 +48,7 @@
             {{Form::label('category', 'Category')}}
             {{Form::text('category', '', ['class' => 'form-control', 'placeholder' => 'Category'])}}
         </div>
+        <b>Capitilize.</b>
         <div class="form-group">
             {{Form::label('body', 'Body')}}
             {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
