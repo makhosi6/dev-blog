@@ -1,5 +1,15 @@
 @extends('layout.app')
 @section('content')
+@push('page-meta')
+<title>Reference.dev | home</title>
+<meta name="description" content="Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
+at the coast of the Semantics, a large language ocean.">
+@endpush
+@push('non-index')
+    <meta name="robots" content="index, follow">
+@endpush
+
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/max247rduzij-qAjJk-un3BI.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -59,4 +69,37 @@
         </div>
     </div>
 </section>
+@push('json+ld')
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "breadcrumb": "Home",
+        "url": "http://example.com/",
+        "mainEntityOfPage": "https://example.com",
+        "creator": {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "email": "mailto:jane-doe@xyz.edu",
+            "image": "janedoe.jpg",
+            "jobTitle": "Professor",
+            "name": "Jane Doe",
+            "telephone": "(425) 123-4567",
+            "url": "http://www.janedoe.com",
+            "sameAs": [
+                "https://twitter.com/floriansimeth",
+                "https://github.com/makhosi6",
+            ]
+        },
+        "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+        "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
+        "keywords": [
+            @foreach($categories as $cat)
+            "{!!$cat!!}",
+            @endforeach
+        ]
+
+    }
+</script>
+@endpush
 @endsection

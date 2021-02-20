@@ -17,9 +17,9 @@ class Post extends Model
      *
      * @var array
      */
-    protected $casts = [
-        'publish' => 'boolean',
-    ];
+    // protected $casts = [
+    //     'publish' => 'boolean',
+    // ];
 
     public function user(){
         return $this->belongsTo('App\User');

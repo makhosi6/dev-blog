@@ -2,6 +2,7 @@
 @extends('layout.app')
 
 @section('content')
+
     <h1>Edit Post</h1>
     {!! Form::open(['action' => ['PostController@update', $post->post_id ], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
         <div class="form-group">
@@ -18,4 +19,15 @@
         {{Form::hidden('_method', 'PUT')}}
         {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
     {!! Form::close() !!}
+    </div>
+
+    @push('editor-scripts')
+<script src="/js/plugins.js"></script>
+<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('article-ckeditor')
+    CKEDITOR.replace('ref-ckeditor')
+</script>
+@endpush
+</section>
 @endsection

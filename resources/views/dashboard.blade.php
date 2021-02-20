@@ -1,5 +1,9 @@
 @extends('layout.app')
 @section('content')
+@push('non-index')
+    <meta name="robots" content="noindex, nofollow">
+    <title>Dashboard</title>
+@endpush
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/max247rduzij-qAjJk-un3BI.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">

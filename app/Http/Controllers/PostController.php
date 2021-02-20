@@ -106,7 +106,7 @@ class PostController extends Controller
         //
         try {
             $post = Post::where('slug', '=', $slug)->take(1)->get()[0];
-            return view('admin.single')->with('post', $post);
+            return view('admin.article')->with('post', $post);
         } catch (\Exception $th) {
             return view('errors.404');
         }

@@ -1,5 +1,9 @@
 @extends('layout.app')
+
 @section('content')
+@push('non-index')
+    <meta name="robots" content="noindex, nofollow">
+@endpush
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/max247rduzij-qAjJk-un3BI.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -63,5 +67,13 @@
         {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
     {!! Form::close() !!}
 </div>
+@push('editor-scripts')
+<script src="/js/plugins.js"></script>
+<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('article-ckeditor')
+    CKEDITOR.replace('ref-ckeditor')
+</script>
+@endpush
 </section>
 @endsection

@@ -17,7 +17,7 @@ class pagesController extends Controller
     {
         try {
             $post = Post::where('slug', '=', $slug)->take(1)->get();
-            return view('posts.single')->with('post', $post[0]);
+            return view('posts.article')->with('post', $post[0]);
         } catch (\Exception $th) {
             return view('errors.404');
         }

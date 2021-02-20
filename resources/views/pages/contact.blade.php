@@ -1,12 +1,21 @@
 @extends('layout.app')
 @section('content')
+@push('non-index')
+    <meta name="robots" content="index, follow">
+@endpush
+@push('page-meta')
+<title>Reference.dev | home</title>
+<meta name="description" content="Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
+at the coast of the Semantics, a large language ocean.">
+@endpush
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/max247rduzij-qAjJk-un3BI.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate pb-5 text-center">
                 <h1 class="mb-3 bread">Contact</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
+                <p class="breadcrumbs"><span class="mr-2"><a>Home <i
                  class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span>
                 </p>
             </div>
@@ -21,7 +30,12 @@
             </div>
             <div class="w-100"></div>
             <div class="col-md-3">
-                <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                <p>
+                    <span>Address:</span>
+                    <address>
+                         198 West 21th Street, Suite 721 New York NY 10016
+                    </address>
+                </p>
             </div>
             <div class="col-md-3">
                 <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
@@ -30,7 +44,7 @@
                 <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
             </div>
             <div class="col-md-3">
-                <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                <p><span>Website</span> <a href="/">yoursite.com</a></p>
             </div>
         </div>
         <div class="row block-9 no-gutters">
@@ -61,5 +75,42 @@
             </div>
         </div>
     </div>
+    @push('map-scripts')
+        <script src="/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+        <script src="/js/google-map.js"></script>
+    @endpush
 </section>
+@push('json+ld')
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "breadcrumb": "Home",
+        "url": "http://example.com/",
+        "mainEntityOfPage": "https://example.com",
+        "creator": {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "email": "mailto:jane-doe@xyz.edu",
+            "image": "janedoe.jpg",
+            "jobTitle": "Professor",
+            "name": "Jane Doe",
+            "telephone": "(425) 123-4567",
+            "url": "http://www.janedoe.com",
+            "sameAs": [
+                "https://twitter.com/floriansimeth",
+                "https://github.com/makhosi6",
+            ]
+        },
+        "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+        "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
+        "keywords": [
+            @foreach($categories as $cat)
+            "{!!$cat!!}",
+            @endforeach
+        ]
+
+    }
+</script>
+@endpush
 @endsection
