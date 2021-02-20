@@ -4,20 +4,20 @@
 <meta name="robots" content="index, follow">
 @endpush
 @push('page-meta')
-<title>Reference.dev | {!!$name!!}</title>
+<title>thereference.dev | {!!$name!!}</title>
 <meta name="description" content="Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
 at the coast of the Semantics, a large language ocean.">
 <meta property="og:title" content="{!!$name!!}">
 <meta property="og:description" content="Offering tour packages for individuals or groups.">
-<meta property="og:image" content="http://example.com/storage/cover_images/thumbnail.jpg">
-<meta property="og:url" content="http://example.com/articles/{!!$name!!}">
+<meta property="og:image" content="http://thereference.dev/storage/cover_images/thumbnail.jpg">
+<meta property="og:url" content="http://thereference.dev/articles/{!!$name!!}">
 <meta property="og:type" content="webpage" />
 <meta name="twitter:title" content="{!!$name!!}">
 <meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
-<meta name="twitter:image" content=" http://euro-travel-example.com/thumbnail.jpg">
+<meta name="twitter:image" content=" http://thereference.dev/thumbnail.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:url" content="https://example.com/articles/{!!$name!!}">
+<meta name="twitter:url" content="https://thereference.dev/articles/{!!$name!!}">
 @endpush
 <section class="hero-wrap hero-wrap-2 js-fullheight"
     style="background-image: url('/images/max247rduzij-qAjJk-un3BI.jpg');" data-stellar-background-ratio="0.5">
@@ -105,29 +105,29 @@ at the coast of the Semantics, a large language ocean.">
         "@context": "https://schema.org",
         "@type": "WebPage",
         "breadcrumb": "Home > Article > {!!$name!!}",
-        "url": "http://example.com/aricles/{!!$name!!}",
+        "url": "http://thereference.dev/aricles/{!!$name!!}",
         "logo": {
-            "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
+            "url": "{{asset('images/grey.png')}}",
             "width": "512",
             "@context": "http://schema.org",
             "@type": "ImageObject"
           },
-        "mainEntityOfPage": "https://example.com",
+        "mainEntityOfPage": "https://thereference.dev",
         "creator": {
             "@context": "https://schema.org",
             "@type": "Person",
-            "email": "mailto:jane-doe@xyz.edu",
-            "image": "janedoe.jpg",
-            "jobTitle": "Professor",
-            "name": "Jane Doe",
-            "telephone": "(425) 123-4567",
+            "email": "mailto:hey@thereference.dev",
+            "image": "{{asset('images/makhosi.JPG')}}",
+            "jobTitle": "Web Developer",
+            "name": "Makhosandile",
+            "telephone": "(+27) 81 323 0202",
             "url": "http://www.janedoe.com",
             "sameAs": [
                 "https://twitter.com/floriansimeth",
             ]
         },
         "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
-        "license": "",
+        "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
         "keywords": ["{!!$name!!}"]
 
     }
@@ -140,25 +140,24 @@ at the coast of the Semantics, a large language ocean.">
         "itemListOrder": "Descending",
         "itemListElement": [
             @foreach($posts as $key => $post)
-
             {
                 "@type": "Article",
                 "position": "{!!$key + 1!!}",
                 "mainEntityOfPage": {
                     "@type": "WebPage",
-                    "@id": "/articles/{!!$post->category!!}"
+                    "@id": "http://thereference.dev/articles/{!!$post->category!!}"
                 },
                 "articleSection": "{!!$post->category!!}",
                 "headline": "{!!$post->title!!}",
                 "datePublished": "{!!$post->created_at!!}",
                 "dateModified": "{!!$post->updated_at!!}",
-                "image": "/storage/cover_images/{{$post->cover_image}}",
-                "url": "/article/{!!$post->slug!!}",
+                "image": "http://thereference.dev/storage/cover_images/{{$post->cover_image}}",
+                "url": "http://thereference.dev/article/{!!$post->slug!!}",
                 "author": "Makhosandile",
                 "publisher": {
                     "@context": "https://schema.org",
                     "@type": "WebSite",
-                    "url": "http://example.com/",
+                    "url": "http://thereference.dev/",
                     "sameAs": [
                         "https://twitter.com/floriansimeth",
                     ]
@@ -166,11 +165,11 @@ at the coast of the Semantics, a large language ocean.">
                 "creator": {
                     "@context": "https://schema.org",
                     "@type": "Person",
-                    "email": "mailto:jane-doe@xyz.edu",
-                    "image": "janedoe.jpg",
+                    "email": "mailto:hey@thereference.dev",
+                    "image": "{{asset('images/makhosi.JPG')}}",
                     "jobTitle": "Web Developer",
                     "name": "Makhosandile",
-                    "telephone": "(425) 123-4567",
+                    "telephone": "(+27) 81 323 0202",
                     "url": "http://www.janedoe.com",
                     "sameAs": [
                         "https://twitter.com/floriansimeth",

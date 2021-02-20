@@ -4,20 +4,20 @@
 <meta name="robots" content="noindex, nofollow">
 @endpush
 @push('page-meta')
-<title>Reference.dev | Contact</title>
+<title>thereference.dev | Contact</title>
 <meta name="description" content="Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
 at the coast of the Semantics, a large language ocean.">
 <meta property="og:title" content="European Travel Destinations">
 <meta property="og:description" content="Offering tour packages for individuals or groups.">
-<meta property="og:image" content="http://example.com/thumbnail.jpg">
-<meta property="og:url" content="http://example.com/">
+<meta property="og:image" content="{{asset('images/grey.png')}}">
+<meta property="og:url" content="http://thereference.dev/">
 <meta property="og:type" content="website" />
 <meta name="twitter:title" content="European Travel Destinations ">
 <meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
-<meta name="twitter:image" content=" http://example.com/thumbnail.jpg">
+<meta name="twitter:image" content=" {{asset('images/grey.png')}}">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:url" content="https://example.com/">
+<meta name="twitter:url" content="http://thereference.dev/">
 @endpush
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/max247rduzij-qAjJk-un3BI.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
@@ -51,10 +51,10 @@ at the coast of the Semantics, a large language ocean.">
                 <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
             </div>
             <div class="col-md-3">
-                <p><span>Email:</span> <a href="mailto:info@yoursite.com">hey@yoursite.com</a></p>
+                <p><span>Email:</span> <a href="mailto:hey@thereference.dev">hey@thereference.dev</a></p>
             </div>
             <div class="col-md-3">
-                <p><span>Website</span> <a href="/">yoursite.com</a></p>
+                <p><span>Website</span> <a href="/">thereference.dev</a></p>
             </div>
         </div>
         <div class="row block-9 no-gutters">
@@ -96,22 +96,22 @@ at the coast of the Semantics, a large language ocean.">
         "@context": "https://schema.org",
         "@type": "WebSite",
         "breadcrumb": "Home",
-        "url": "http://example.com/",
+        "url": "http://thereference.dev/",
         "logo": {
-            "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
+            "url": "{{asset('images/grey.png')}}",
             "width": "512",
             "@context": "http://schema.org",
             "@type": "ImageObject"
           },
-        "mainEntityOfPage": "https://example.com",
+        "mainEntityOfPage": "https://thereference.dev",
         "creator": {
             "@context": "https://schema.org",
             "@type": "Person",
-            "email": "mailto:jane-doe@xyz.edu",
-            "image": "janedoe.jpg",
-            "jobTitle": "Professor",
-            "name": "Jane Doe",
-            "telephone": "(425) 123-4567",
+            "email": "mailto:hey@thereference.dev",
+            "image": "{{asset('images/makhosi.JPG')}}",
+            "jobTitle": "Web Developer",
+            "name": "Makhosandile",
+            "telephone": "(+27) 81 323 0202",
             "url": "http://www.janedoe.com",
             "sameAs": [
                 "https://twitter.com/floriansimeth",
@@ -122,7 +122,7 @@ at the coast of the Semantics, a large language ocean.">
         "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
         "keywords": [
             @foreach($categories as $cat)
-            "{!!$cat!!}",
+            "{!!$cat->category!!}",
             @endforeach
         ]
 

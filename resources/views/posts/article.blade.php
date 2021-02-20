@@ -5,13 +5,13 @@
 <meta name="description" content="{!!$post->title!!}">
 <meta name="twitter:title" content={!!$post->title!!}>
 <meta name="twitter:description" content={!!$post->{'sub-title'}!!}>
-<meta name="twitter:image" content="http://example.com/storage/cover_images/{!!$post->cover_image!!}">
+<meta name="twitter:image" content="http://thereference.dev/storage/cover_images/{!!$post->cover_image!!}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://example.com/article/{!!$post->slug!!}">
+<meta name="twitter:url" content="https://thereference.dev/article/{!!$post->slug!!}">
 <meta property="og:title" content={!!$post->title!!}>
 <meta property="og:description" content={!!$post->{'sub-title'}!!}>
-<meta property="og:image" content="http://example.com/storage/cover_images/{{$post->cover_image}}">
-<meta property="og:url" content="http://example.com/article/{!!$post->slug!!}">
+<meta property="og:image" content="http://thereference.dev/storage/cover_images/{{$post->cover_image}}">
+<meta property="og:url" content="http://thereference.dev/article/{!!$post->slug!!}">
 <meta property="og:type" content="website" />
 @endpush
 @push('non-index')
@@ -99,12 +99,8 @@
                         </div>
                     </div>
                     @endforeach
-
                 </div>
-
-
             </aside>
-
         </div>
     </div>
 </div>
@@ -123,9 +119,9 @@
     "publisher": {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "http://example.com/",
+        "url": "http://thereference.dev/",
         "logo": {
-            "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
+            "url": "{{asset('images/grey.png')}}",
             "width": "512",
             "@context": "http://schema.org",
             "@type": "ImageObject"
@@ -137,14 +133,15 @@
     "creator": {
         "@context": "https://schema.org",
         "@type": "Person",
-        "email": "mailto:jane-doe@xyz.edu",
-        "image": "janedoe.jpg",
-        "jobTitle": "Professor",
-        "name": "Jane Doe",
-        "telephone": "(425) 123-4567",
+        "email": "mailto:hey@thereference.dev",
+        "image": "{{asset('images/makhosi.JPG')}}",
+        "jobTitle": "Web Developer",
+        "name": "Makhosandile",
+        "telephone": "(+27) 81 323 0202",
         "url": "http://www.janedoe.com",
         "sameAs": [
             "https://twitter.com/floriansimeth",
+
         ]
     }
     "about": {
