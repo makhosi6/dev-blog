@@ -75,6 +75,9 @@ h1#lh {
   display: flex !important;
   justify-content: space-between;
 }
+#label{
+  color: grey !important;
+}
 /* .grd-btn:last-child >  {
  display: block !important;
 } */

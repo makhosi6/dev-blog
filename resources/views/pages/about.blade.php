@@ -9,7 +9,7 @@ at the coast of the Semantics, a large language ocean.">
 <meta property="og:title" content="European Travel Destinations">
 <meta property="og:description" content="Offering tour packages for individuals or groups.">
 <meta property="og:image" content="{{asset('images/grey.png')}}">
-<meta property="og:url" content="http://thereference.dev/">
+<meta property="og:url" content="https://thereference.dev/">
 <meta property="og:type" content="website" />
 
 <meta name="twitter:title" content="European Travel Destinations ">
@@ -27,8 +27,15 @@ at the coast of the Semantics, a large language ocean.">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate pb-5 text-center">
                 <h1 class="mb-3 bread">About</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-                 class="ion-ios-arrow-forward"></i></a></span> <span>About <i class="ion-ios-arrow-forward"></i></span>
+                <p itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumbs">
+                    <span itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem" class="mr-2">
+                        <a itemprop="item" href="/">Home <i class="ion-ios-arrow-forward"></i></a>
+                    </span> 
+                    <span itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem"  class="mr-2">
+                        <a itemprop="item" href="/about" >About <i class="ion-ios-arrow-forward"></i></a>
+                    </span>
                 </p>
             </div>
         </div>
@@ -85,8 +92,8 @@ at the coast of the Semantics, a large language ocean.">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "breadcrumb": "Home",
-        "url": "http://thereference.dev/",
+        "breadcrumb": "Home > About",
+        "url": "https://thereference.dev/",
         "logo": {
             "url": "{{asset('images/grey.png')}}",
             "width": "512",
@@ -104,7 +111,7 @@ at the coast of the Semantics, a large language ocean.">
             "telephone": "(+27) 81 323 0202",
             "url": "http://www.janedoe.com",
             "sameAs": [
-                "https://twitter.com/floriansimeth",
+                "https://twitter.com/khosii",
                 "https://github.com/makhosi6",
             ]
         },

@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('content')
 <section>
-    @push('non-index')
+    @push('index')
     <meta name="robots" content="index, follow">
     @endpush
     @push('page-meta')
@@ -12,7 +12,7 @@
     <meta property="og:title" content="European Travel Destinations">
     <meta property="og:description" content="Offering tour packages for individuals or groups.">
     <meta property="og:image" content="{{asset('images/grey.png')}}">
-    <meta property="og:url" content="http://thereference.dev/">
+    <meta property="og:url" content="https://thereference.dev/">
     <meta property="og:type" content="website" />
     <meta name="twitter:title" content="European Travel Destinations ">
     <meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
@@ -59,7 +59,7 @@
             <article itemscope itemtype="https://schema.org/Article" class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
                     <a itemprop="image" href="/article/{!!$post->slug!!}" class="block-20" role="img"
-                        aria-label={!!$post->title!!}
+                        aria-label="{!!$post->title!!}"
                         style='background-image: url("/storage/cover_images/{{$post->cover_image}}");'>
                     </a>
                     <div class="text p-4 float-right d-block">
@@ -120,7 +120,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "breadcrumb": "Home",
-        "url": "http://thereference.dev/",
+        "url": "https://thereference.dev/",
         "logo": {
             "url": "{{asset('images/grey.png')}}",
             "width": "512",
@@ -138,7 +138,7 @@
             "telephone": "(+27) 81 323 0202",
             "url": "http://www.janedoe.com",
             "sameAs": [
-                "https://twitter.com/floriansimeth",
+                "https://twitter.com/khosii",
                 "https://github.com/makhosi6",
             ]
         },
@@ -164,19 +164,19 @@
                 "position": "{!!$key + 1!!}",
                 "mainEntityOfPage": {
                     "@type": "WebPage",
-                    "@id": "http://thereference.dev/articles/{!!$post->category!!}"
+                    "@id": "https://thereference.dev/articles/{!!$post->category!!}"
                 },
                 "articleSection": "{!!$post->category!!}",
                 "headline": "{!!$post->title!!}",
                 "datePublished": "{!!$post->created_at!!}",
                 "dateModified": "{!!$post->updated_at!!}",
-                "image": "http://thereference.dev/storage/cover_images/{{$post->cover_image}}",
-                "url": "http://thereference.dev/articles/{!!$post->slug!!}",
+                "image": "https://thereference.dev/storage/cover_images/{{$post->cover_image}}",
+                "url": "https://thereference.dev/articles/{!!$post->slug!!}",
                 "author": "Makhosandile",
                 "publisher": {
                     "@context": "https://schema.org",
                     "@type": "WebSite",
-                    "url": "http://thereference.dev/",
+                    "url": "https://thereference.dev/",
                     "logo": {
                         "url": "{{asset('images/grey.png')}}",
                         "width": "512",
@@ -184,7 +184,7 @@
                         "@type": "ImageObject"
                       },
                     "sameAs": [
-                        "https://twitter.com/floriansimeth",
+                        "https://twitter.com/khosii",
                     ]
                 },
                 "creator": {
@@ -197,7 +197,7 @@
                     "telephone": "(+27) 81 323 0202",
                     "url": "http://www.janedoe.com",
                     "sameAs": [
-                        "https://twitter.com/floriansimeth",
+                        "https://twitter.com/khosii",
                     ]
                 },
                 "about": {

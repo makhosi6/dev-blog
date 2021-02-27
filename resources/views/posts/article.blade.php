@@ -3,18 +3,18 @@
 @push('post-meta')
 <title>{!!$post->title!!}</title>
 <meta name="description" content="{!!$post->title!!}">
-<meta name="twitter:title" content={!!$post->title!!}>
-<meta name="twitter:description" content={!!$post->{'sub-title'}!!}>
-<meta name="twitter:image" content="http://thereference.dev/storage/cover_images/{!!$post->cover_image!!}">
+<meta name="twitter:title" content="{!!$post->title!!}">
+<meta name="twitter:description" content="{!!$post->{'sub-title'}!!}">
+<meta name="twitter:image" content="https://thereference.dev/storage/cover_images/{!!$post->cover_image!!}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://thereference.dev/article/{!!$post->slug!!}">
-<meta property="og:title" content={!!$post->title!!}>
-<meta property="og:description" content={!!$post->{'sub-title'}!!}>
-<meta property="og:image" content="http://thereference.dev/storage/cover_images/{{$post->cover_image}}">
-<meta property="og:url" content="http://thereference.dev/article/{!!$post->slug!!}">
+<meta property="og:title" content="{!!$post->title!!}">
+<meta property="og:description" content="{!!$post->{'sub-title'}!!}">
+<meta property="og:image" content="https://thereference.dev/storage/cover_images/{{$post->cover_image}}">
+<meta property="og:url" content="https://thereference.dev/article/{!!$post->slug!!}">
 <meta property="og:type" content="website" />
 @endpush
-@push('non-index')
+@push('index')
 <meta name="robots" content="index, follow">
 @endpush
 <article itemscope itemtype="https://schema.org/Article">
@@ -119,7 +119,7 @@
     "publisher": {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "http://thereference.dev/",
+        "url": "https://thereference.dev/",
         "logo": {
             "url": "{{asset('images/grey.png')}}",
             "width": "512",
@@ -127,7 +127,7 @@
             "@type": "ImageObject"
           },
         "sameAs": [
-            "https://twitter.com/floriansimeth",
+            "https://twitter.com/khosii",
         ]
     },
     "creator": {
@@ -140,7 +140,7 @@
         "telephone": "(+27) 81 323 0202",
         "url": "http://www.janedoe.com",
         "sameAs": [
-            "https://twitter.com/floriansimeth",
+            "https://twitter.com/khosii",
 
         ]
     }

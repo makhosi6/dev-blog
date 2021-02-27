@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('content')
-@push('non-index')
+@push('index')
 <meta name="robots" content="index, follow">
 @endpush
 @push('page-meta')
@@ -10,12 +10,12 @@ Consonantia, there live the blind texts. Separated they live in Bookmarksgrove r
 at the coast of the Semantics, a large language ocean.">
 <meta property="og:title" content="{!!$name!!}">
 <meta property="og:description" content="Offering tour packages for individuals or groups.">
-<meta property="og:image" content="http://thereference.dev/storage/cover_images/thumbnail.jpg">
-<meta property="og:url" content="http://thereference.dev/articles/{!!$name!!}">
+<meta property="og:image" content="https://thereference.dev/storage/cover_images/thumbnail.jpg">
+<meta property="og:url" content="https://thereference.dev/articles/{!!$name!!}">
 <meta property="og:type" content="webpage" />
 <meta name="twitter:title" content="{!!$name!!}">
 <meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
-<meta name="twitter:image" content=" http://thereference.dev/thumbnail.jpg">
+<meta name="twitter:image" content=" https://thereference.dev/thumbnail.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:url" content="https://thereference.dev/articles/{!!$name!!}">
 @endpush
@@ -33,11 +33,11 @@ at the coast of the Semantics, a large language ocean.">
                     </span> 
                     <span itemprop="itemListElement" itemscope
                     itemtype="https://schema.org/ListItem"  class="mr-2">
-                        <a itemprop="item" href="/article/{!!$name!!}" >Articles <i class="ion-ios-arrow-forward"></i></a>
+                        <a itemprop="item" href="/articles/{!!$name!!}" >Articles <i class="ion-ios-arrow-forward"></i></a>
                     </span>
                     <span itemprop="itemListElement" itemscope
                     itemtype="https://schema.org/ListItem"> 
-                        <a itemprop="item" href="/article/{!!$name!!}"> {!!$name!!} </a><i class="ion-ios-arrow-forward"></i>
+                        <a itemprop="item" href="/articles/{!!$name!!}"> {!!$name!!} </a><i class="ion-ios-arrow-forward"></i>
                     </span>
                 </p>
             </div>
@@ -105,7 +105,7 @@ at the coast of the Semantics, a large language ocean.">
         "@context": "https://schema.org",
         "@type": "WebPage",
         "breadcrumb": "Home > Article > {!!$name!!}",
-        "url": "http://thereference.dev/aricles/{!!$name!!}",
+        "url": "https://thereference.dev/aricles/{!!$name!!}",
         "logo": {
             "url": "{{asset('images/grey.png')}}",
             "width": "512",
@@ -123,7 +123,7 @@ at the coast of the Semantics, a large language ocean.">
             "telephone": "(+27) 81 323 0202",
             "url": "http://www.janedoe.com",
             "sameAs": [
-                "https://twitter.com/floriansimeth",
+                "https://twitter.com/khosii",
             ]
         },
         "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
@@ -145,21 +145,21 @@ at the coast of the Semantics, a large language ocean.">
                 "position": "{!!$key + 1!!}",
                 "mainEntityOfPage": {
                     "@type": "WebPage",
-                    "@id": "http://thereference.dev/articles/{!!$post->category!!}"
+                    "@id": "https://thereference.dev/articles/{!!$post->category!!}"
                 },
                 "articleSection": "{!!$post->category!!}",
                 "headline": "{!!$post->title!!}",
                 "datePublished": "{!!$post->created_at!!}",
                 "dateModified": "{!!$post->updated_at!!}",
-                "image": "http://thereference.dev/storage/cover_images/{{$post->cover_image}}",
-                "url": "http://thereference.dev/article/{!!$post->slug!!}",
+                "image": "https://thereference.dev/storage/cover_images/{{$post->cover_image}}",
+                "url": "https://thereference.dev/article/{!!$post->slug!!}",
                 "author": "Makhosandile",
                 "publisher": {
                     "@context": "https://schema.org",
                     "@type": "WebSite",
-                    "url": "http://thereference.dev/",
+                    "url": "https://thereference.dev/",
                     "sameAs": [
-                        "https://twitter.com/floriansimeth",
+                        "https://twitter.com/khosii",
                     ]
                 },
                 "creator": {
@@ -172,7 +172,8 @@ at the coast of the Semantics, a large language ocean.">
                     "telephone": "(+27) 81 323 0202",
                     "url": "http://www.janedoe.com",
                     "sameAs": [
-                        "https://twitter.com/floriansimeth",
+                        "https://twitter.com/khosii",
+                        "https://github.com/makhosi6",
                     ]
                 },
                 "about": {
