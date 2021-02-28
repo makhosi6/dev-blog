@@ -4,20 +4,29 @@
 <meta name="robots" content="noindex, nofollow">
 @endpush
 @push('page-meta')
-<title>thereference.dev | Contact</title>
+<title>Reference.dev | Contact</title>
 <meta name="description" content="Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
 at the coast of the Semantics, a large language ocean.">
 <meta property="og:title" content="European Travel Destinations">
 <meta property="og:description" content="Offering tour packages for individuals or groups.">
+<<<<<<< HEAD
 <meta property="og:image" content="{{asset('images/grey.png')}}">
 <meta property="og:url" content="https://thereference.dev/">
+=======
+<meta property="og:image" content="http://example.com/thumbnail.jpg">
+<meta property="og:url" content="http://example.com/">
+>>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
 <meta property="og:type" content="website" />
 <meta name="twitter:title" content="European Travel Destinations ">
 <meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
-<meta name="twitter:image" content=" {{asset('images/grey.png')}}">
+<meta name="twitter:image" content=" http://example.com/thumbnail.jpg">
 <meta name="twitter:card" content="summary">
+<<<<<<< HEAD
 <meta name="twitter:url" content="https://thereference.dev/">
+=======
+<meta name="twitter:url" content="https://example.com/">
+>>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
 @endpush
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/max247rduzij-qAjJk-un3BI.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
@@ -58,10 +67,17 @@ at the coast of the Semantics, a large language ocean.">
                 <p><span id="label" >Phone:</span> <a href="tel://0027813230202">(+27) 81 323 0202</a></p>
             </div>
             <div class="col-md-3">
+<<<<<<< HEAD
                 <p><span id="label" >Email:</span> <a href="mailto:hey@thereference.dev">hey@thereference.dev</a></p>
             </div>
             <div class="col-md-3">
                 <p><span id="label" >Website</span> <a href="/">thereference.dev</a></p>
+=======
+                <p><span>Email:</span> <a href="mailto:info@yoursite.com">hey@yoursite.com</a></p>
+            </div>
+            <div class="col-md-3">
+                <p><span>Website</span> <a href="/">yoursite.com</a></p>
+>>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
             </div>
         </div>
         <div class="row block-9 no-gutters">
@@ -101,23 +117,28 @@ at the coast of the Semantics, a large language ocean.">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
+<<<<<<< HEAD
         "breadcrumb": "Home > About",
         "url": "https://thereference.dev/",
+=======
+        "breadcrumb": "Home",
+        "url": "http://example.com/",
+>>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
         "logo": {
-            "url": "{{asset('images/grey.png')}}",
+            "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
             "width": "512",
             "@context": "http://schema.org",
             "@type": "ImageObject"
           },
-        "mainEntityOfPage": "https://thereference.dev",
+        "mainEntityOfPage": "https://example.com",
         "creator": {
             "@context": "https://schema.org",
             "@type": "Person",
-            "email": "mailto:hey@thereference.dev",
-            "image": "{{asset('images/makhosi.JPG')}}",
-            "jobTitle": "Web Developer",
-            "name": "Makhosandile",
-            "telephone": "(+27) 81 323 0202",
+            "email": "mailto:jane-doe@xyz.edu",
+            "image": "janedoe.jpg",
+            "jobTitle": "Professor",
+            "name": "Jane Doe",
+            "telephone": "(425) 123-4567",
             "url": "http://www.janedoe.com",
             "sameAs": [
                 "https://twitter.com/khosii",
@@ -128,7 +149,7 @@ at the coast of the Semantics, a large language ocean.">
         "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
         "keywords": [
             @foreach($categories as $cat)
-            "{!!$cat->category!!}",
+            "{!!$cat!!}",
             @endforeach
         ]
 

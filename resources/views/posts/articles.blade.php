@@ -4,20 +4,29 @@
 <meta name="robots" content="index, follow">
 @endpush
 @push('page-meta')
-<title>thereference.dev | {!!$name!!}</title>
+<title>Reference.dev | {!!$name!!}</title>
 <meta name="description" content="Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
 at the coast of the Semantics, a large language ocean.">
 <meta property="og:title" content="{!!$name!!}">
 <meta property="og:description" content="Offering tour packages for individuals or groups.">
+<<<<<<< HEAD
 <meta property="og:image" content="https://thereference.dev/storage/cover_images/thumbnail.jpg">
 <meta property="og:url" content="https://thereference.dev/articles/{!!$name!!}">
 <meta property="og:type" content="webpage" />
 <meta name="twitter:title" content="{!!$name!!}">
 <meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
 <meta name="twitter:image" content=" https://thereference.dev/thumbnail.jpg">
+=======
+<meta property="og:image" content="http://example.com/storage/cover_images/thumbnail.jpg">
+<meta property="og:url" content="http://example.com/articles/{!!$name!!}">
+<meta property="og:type" content="webpage" />
+<meta name="twitter:title" content="{!!$name!!}">
+<meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
+<meta name="twitter:image" content=" http://euro-travel-example.com/thumbnail.jpg">
+>>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
 <meta name="twitter:card" content="summary">
-<meta name="twitter:url" content="https://thereference.dev/articles/{!!$name!!}">
+<meta name="twitter:url" content="https://example.com/articles/{!!$name!!}">
 @endpush
 <section class="hero-wrap hero-wrap-2 js-fullheight"
     style="background-image: url('/images/max247rduzij-qAjJk-un3BI.jpg');" data-stellar-background-ratio="0.5">
@@ -105,29 +114,33 @@ at the coast of the Semantics, a large language ocean.">
         "@context": "https://schema.org",
         "@type": "WebPage",
         "breadcrumb": "Home > Article > {!!$name!!}",
+<<<<<<< HEAD
         "url": "https://thereference.dev/aricles/{!!$name!!}",
+=======
+        "url": "http://example.com/aricles/{!!$name!!}",
+>>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
         "logo": {
-            "url": "{{asset('images/grey.png')}}",
+            "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
             "width": "512",
             "@context": "http://schema.org",
             "@type": "ImageObject"
           },
-        "mainEntityOfPage": "https://thereference.dev",
+        "mainEntityOfPage": "https://example.com",
         "creator": {
             "@context": "https://schema.org",
             "@type": "Person",
-            "email": "mailto:hey@thereference.dev",
-            "image": "{{asset('images/makhosi.JPG')}}",
-            "jobTitle": "Web Developer",
-            "name": "Makhosandile",
-            "telephone": "(+27) 81 323 0202",
+            "email": "mailto:jane-doe@xyz.edu",
+            "image": "janedoe.jpg",
+            "jobTitle": "Professor",
+            "name": "Jane Doe",
+            "telephone": "(425) 123-4567",
             "url": "http://www.janedoe.com",
             "sameAs": [
                 "https://twitter.com/khosii",
             ]
         },
         "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
-        "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
+        "license": "",
         "keywords": ["{!!$name!!}"]
 
     }
@@ -140,24 +153,38 @@ at the coast of the Semantics, a large language ocean.">
         "itemListOrder": "Descending",
         "itemListElement": [
             @foreach($posts as $key => $post)
+
             {
                 "@type": "Article",
                 "position": "{!!$key + 1!!}",
                 "mainEntityOfPage": {
                     "@type": "WebPage",
+<<<<<<< HEAD
                     "@id": "https://thereference.dev/articles/{!!$post->category!!}"
+=======
+                    "@id": "/articles/{!!$post->category!!}"
+>>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
                 },
                 "articleSection": "{!!$post->category!!}",
                 "headline": "{!!$post->title!!}",
                 "datePublished": "{!!$post->created_at!!}",
                 "dateModified": "{!!$post->updated_at!!}",
+<<<<<<< HEAD
                 "image": "https://thereference.dev/storage/cover_images/{{$post->cover_image}}",
                 "url": "https://thereference.dev/article/{!!$post->slug!!}",
+=======
+                "image": "/storage/cover_images/{{$post->cover_image}}",
+                "url": "/article/{!!$post->slug!!}",
+>>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
                 "author": "Makhosandile",
                 "publisher": {
                     "@context": "https://schema.org",
                     "@type": "WebSite",
+<<<<<<< HEAD
                     "url": "https://thereference.dev/",
+=======
+                    "url": "http://example.com/",
+>>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
                     "sameAs": [
                         "https://twitter.com/khosii",
                     ]
@@ -165,11 +192,11 @@ at the coast of the Semantics, a large language ocean.">
                 "creator": {
                     "@context": "https://schema.org",
                     "@type": "Person",
-                    "email": "mailto:hey@thereference.dev",
-                    "image": "{{asset('images/makhosi.JPG')}}",
+                    "email": "mailto:jane-doe@xyz.edu",
+                    "image": "janedoe.jpg",
                     "jobTitle": "Web Developer",
                     "name": "Makhosandile",
-                    "telephone": "(+27) 81 323 0202",
+                    "telephone": "(425) 123-4567",
                     "url": "http://www.janedoe.com",
                     "sameAs": [
                         "https://twitter.com/khosii",

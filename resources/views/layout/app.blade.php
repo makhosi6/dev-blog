@@ -9,7 +9,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta content="thereference.dev" itemprop="name">
+        <meta content="reference.dev" itemprop="name">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="msapplication-TileColor" content="#868181">
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -48,7 +48,21 @@
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/manifest.json">
+<<<<<<< HEAD
         <link href="https://thereference.dev/" rel="canonical">
+=======
+        <meta name="msapplication-TileColor" content="#868181">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta content="#868181"  name="theme-color">
+        
+        @stack('post-meta')
+        @stack('page-meta')
+        @stack('index')
+        @stack('non-index')
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link href="https://reference.dev/" rel="canonical">
+>>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <link rel="stylesheet" href="{{asset('css/animate.css')}}">

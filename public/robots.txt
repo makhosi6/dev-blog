@@ -6,4 +6,4 @@ Disallow: /admins/
 User-agent: *
 Allow: /
 
-Sitemap: http://www.thereference.dev/sitemap.xml
+Sitemap: http://www.example.com/sitemap.xml
