@@ -3,7 +3,6 @@
 @push('post-meta')
 <title>{!!$post->title!!}</title>
 <meta name="description" content="{!!$post->title!!}">
-<<<<<<< HEAD
 <meta name="twitter:title" content="{!!$post->title!!}">
 <meta name="twitter:description" content="{!!$post->{'sub-title'}!!}">
 <meta name="twitter:image" content="https://thereference.dev/storage/cover_images/{!!$post->cover_image!!}">
@@ -13,17 +12,7 @@
 <meta property="og:description" content="{!!$post->{'sub-title'}!!}">
 <meta property="og:image" content="https://thereference.dev/storage/cover_images/{{$post->cover_image}}">
 <meta property="og:url" content="https://thereference.dev/article/{!!$post->slug!!}">
-=======
-<meta name="twitter:title" content={!!$post->title!!}>
-<meta name="twitter:description" content={!!$post->{'sub-title'}!!}>
-<meta name="twitter:image" content="http://example.com/storage/cover_images/{!!$post->cover_image!!}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://example.com/article/{!!$post->slug!!}">
-<meta property="og:title" content={!!$post->title!!}>
-<meta property="og:description" content={!!$post->{'sub-title'}!!}>
-<meta property="og:image" content="http://example.com/storage/cover_images/{{$post->cover_image}}">
-<meta property="og:url" content="http://example.com/article/{!!$post->slug!!}">
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
+
 <meta property="og:type" content="website" />
 @endpush
 @push('index')
@@ -135,11 +124,7 @@
     "publisher": {
         "@context": "https://schema.org",
         "@type": "WebSite",
-<<<<<<< HEAD
         "url": "https://thereference.dev/",
-=======
-        "url": "http://example.com/",
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
         "logo": {
             "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
             "width": "512",
@@ -160,12 +145,8 @@
         "telephone": "(425) 123-4567",
         "url": "http://www.janedoe.com",
         "sameAs": [
-<<<<<<< HEAD
             "https://twitter.com/khosii",
 
-=======
-            "https://twitter.com/floriansimeth",
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
         ]
     }
     "about": {

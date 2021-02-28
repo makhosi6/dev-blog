@@ -10,21 +10,12 @@ Consonantia, there live the blind texts. Separated they live in Bookmarksgrove r
 at the coast of the Semantics, a large language ocean.">
 <meta property="og:title" content="{!!$name!!}">
 <meta property="og:description" content="Offering tour packages for individuals or groups.">
-<<<<<<< HEAD
 <meta property="og:image" content="https://thereference.dev/storage/cover_images/thumbnail.jpg">
 <meta property="og:url" content="https://thereference.dev/articles/{!!$name!!}">
 <meta property="og:type" content="webpage" />
 <meta name="twitter:title" content="{!!$name!!}">
 <meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
 <meta name="twitter:image" content=" https://thereference.dev/thumbnail.jpg">
-=======
-<meta property="og:image" content="http://example.com/storage/cover_images/thumbnail.jpg">
-<meta property="og:url" content="http://example.com/articles/{!!$name!!}">
-<meta property="og:type" content="webpage" />
-<meta name="twitter:title" content="{!!$name!!}">
-<meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
-<meta name="twitter:image" content=" http://euro-travel-example.com/thumbnail.jpg">
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
 <meta name="twitter:card" content="summary">
 <meta name="twitter:url" content="https://example.com/articles/{!!$name!!}">
 @endpush

@@ -11,13 +11,8 @@
     at the coast of the Semantics, a large language ocean." />
     <meta property="og:title" content="European Travel Destinations">
     <meta property="og:description" content="Offering tour packages for individuals or groups.">
-<<<<<<< HEAD
     <meta property="og:image" content="{{asset('images/grey.png')}}">
     <meta property="og:url" content="https://thereference.dev/">
-=======
-    <meta property="og:image" content="http://example.com/thumbnail.jpg">
-    <meta property="og:url" content="http://example.com/">
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
     <meta property="og:type" content="website" />
     <meta name="twitter:title" content="European Travel Destinations ">
     <meta name="twitter:description" content=" Offering tour packages for individuals or groups.">

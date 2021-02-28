@@ -20,24 +20,15 @@ class AppServiceProvider extends ServiceProvider
         //
         $unique = array();
 
-        // $categories = Post::orderBy('created_at', 'desc')->take(10)->get();
-        // $articles = Post::orderBy('created_at', 'desc')->take(3)->get();
+        $categories = Post::orderBy('created_at', 'desc')->take(10)->get();
+        $articles = Post::orderBy('created_at', 'desc')->take(3)->get();
 
-        // foreach ($categories as $c) {
-        //     $unique[$c->category] = $c;
-        // }
-        View::share("categories", ["one","two"]);
-        View::share('articles', [array(
-            "title"=> "Title here",
-            "category"=> "category here",
-            "category"=> "category here",
-            "date"=> "date here",
-            "slug"=> "slug-here",
-            "created_at"=> "2021-02-21 16:36:45",
-            "updated_at"=> "2021-02-21 16:36:45",
-        )]);
-        // View::share("categories", $unique);
-        // View::share('articles', $articles);
+        foreach ($categories as $c) {
+            $unique[$c->category] = $c;
+        }
+       
+        View::share("categories", $unique);
+        View::share('articles', $articles);
     }
 
     /**
