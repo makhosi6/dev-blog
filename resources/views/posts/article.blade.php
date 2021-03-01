@@ -12,7 +12,6 @@
 <meta property="og:description" content="{!!$post->{'sub-title'}!!}">
 <meta property="og:image" content="https://thereference.dev/storage/cover_images/{{$post->cover_image}}">
 <meta property="og:url" content="https://thereference.dev/article/{!!$post->slug!!}">
-
 <meta property="og:type" content="website" />
 @endpush
 @push('index')
@@ -126,7 +125,7 @@
         "@type": "WebSite",
         "url": "https://thereference.dev/",
         "logo": {
-            "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
+            "url": "{{asset('images/grey.png')}}",
             "width": "512",
             "@context": "http://schema.org",
             "@type": "ImageObject"
@@ -138,15 +137,14 @@
     "creator": {
         "@context": "https://schema.org",
         "@type": "Person",
-        "email": "mailto:jane-doe@xyz.edu",
-        "image": "janedoe.jpg",
-        "jobTitle": "Professor",
-        "name": "Jane Doe",
-        "telephone": "(425) 123-4567",
-        "url": "http://www.janedoe.com",
+        "email": "mailto:hey@thereference.dev",
+        "image": "{{asset('images/makhosi.JPG')}}",
+        "jobTitle": "Web Developer",
+        "name": "Makhosandile",
+        "telephone": "(+27) 81 323 0202",
+        "url": "http://www.github.com/makhosi6",
         "sameAs": [
             "https://twitter.com/khosii",
-
         ]
     }
     "about": {
@@ -155,7 +153,6 @@
         "about": "{!!$post->category!!}",
         "name": "{!!$post->title!!}",
         "text": "{!!$post->{'sub-title'}!!}",
-
     }
 </script>
 @endpush

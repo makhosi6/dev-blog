@@ -105,35 +105,30 @@ at the coast of the Semantics, a large language ocean.">
         "@context": "https://schema.org",
         "@type": "WebPage",
         "breadcrumb": "Home > Article > {!!$name!!}",
-<<<<<<< HEAD
         "url": "https://thereference.dev/aricles/{!!$name!!}",
-=======
-        "url": "http://example.com/aricles/{!!$name!!}",
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
         "logo": {
-            "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
+            "url": "{{asset('images/grey.png')}}",
             "width": "512",
             "@context": "http://schema.org",
             "@type": "ImageObject"
           },
-        "mainEntityOfPage": "https://example.com",
+        "mainEntityOfPage": "https://thereference.dev",
         "creator": {
             "@context": "https://schema.org",
             "@type": "Person",
-            "email": "mailto:jane-doe@xyz.edu",
-            "image": "janedoe.jpg",
-            "jobTitle": "Professor",
-            "name": "Jane Doe",
-            "telephone": "(425) 123-4567",
-            "url": "http://www.janedoe.com",
+            "email": "mailto:hey@thereference.dev",
+            "image": "{{asset('images/makhosi.JPG')}}",
+            "jobTitle": "Web Developer",
+            "name": "Makhosandile",
+            "telephone": "(+27) 81 323 0202",
+            "url": "http://www.github.com/makhosi6",
             "sameAs": [
                 "https://twitter.com/khosii",
             ]
         },
         "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
-        "license": "",
+        "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
         "keywords": ["{!!$name!!}"]
-
     }
 </script>
 <script type="application/ld+json">
@@ -144,38 +139,24 @@ at the coast of the Semantics, a large language ocean.">
         "itemListOrder": "Descending",
         "itemListElement": [
             @foreach($posts as $key => $post)
-
             {
                 "@type": "Article",
                 "position": "{!!$key + 1!!}",
                 "mainEntityOfPage": {
                     "@type": "WebPage",
-<<<<<<< HEAD
                     "@id": "https://thereference.dev/articles/{!!$post->category!!}"
-=======
-                    "@id": "/articles/{!!$post->category!!}"
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
                 },
                 "articleSection": "{!!$post->category!!}",
                 "headline": "{!!$post->title!!}",
                 "datePublished": "{!!$post->created_at!!}",
                 "dateModified": "{!!$post->updated_at!!}",
-<<<<<<< HEAD
                 "image": "https://thereference.dev/storage/cover_images/{{$post->cover_image}}",
                 "url": "https://thereference.dev/article/{!!$post->slug!!}",
-=======
-                "image": "/storage/cover_images/{{$post->cover_image}}",
-                "url": "/article/{!!$post->slug!!}",
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
                 "author": "Makhosandile",
                 "publisher": {
                     "@context": "https://schema.org",
                     "@type": "WebSite",
-<<<<<<< HEAD
                     "url": "https://thereference.dev/",
-=======
-                    "url": "http://example.com/",
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
                     "sameAs": [
                         "https://twitter.com/khosii",
                     ]
@@ -183,12 +164,12 @@ at the coast of the Semantics, a large language ocean.">
                 "creator": {
                     "@context": "https://schema.org",
                     "@type": "Person",
-                    "email": "mailto:jane-doe@xyz.edu",
-                    "image": "janedoe.jpg",
+                    "email": "mailto:hey@thereference.dev",
+                    "image": "{{asset('images/makhosi.JPG')}}",
                     "jobTitle": "Web Developer",
                     "name": "Makhosandile",
-                    "telephone": "(425) 123-4567",
-                    "url": "http://www.janedoe.com",
+                    "telephone": "(+27) 81 323 0202",
+                    "url": "http://www.github.com/makhosi6",
                     "sameAs": [
                         "https://twitter.com/khosii",
                         "https://github.com/makhosi6",
@@ -200,7 +181,6 @@ at the coast of the Semantics, a large language ocean.">
                     "about": "{!!$post->category!!}",
                     "name": "{!!$post->title!!}",
                     "text": "{!!$post->{'sub-title'}!!}",
-
                 }
             },
             @endforeach

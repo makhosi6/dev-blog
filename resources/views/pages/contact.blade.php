@@ -10,23 +10,14 @@ Consonantia, there live the blind texts. Separated they live in Bookmarksgrove r
 at the coast of the Semantics, a large language ocean.">
 <meta property="og:title" content="European Travel Destinations">
 <meta property="og:description" content="Offering tour packages for individuals or groups.">
-<<<<<<< HEAD
 <meta property="og:image" content="{{asset('images/grey.png')}}">
 <meta property="og:url" content="https://thereference.dev/">
-=======
-<meta property="og:image" content="http://example.com/thumbnail.jpg">
-<meta property="og:url" content="http://example.com/">
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
 <meta property="og:type" content="website" />
 <meta name="twitter:title" content="European Travel Destinations ">
 <meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
-<meta name="twitter:image" content=" http://example.com/thumbnail.jpg">
+<meta name="twitter:image" content="{{asset('images/grey.png')}}">
 <meta name="twitter:card" content="summary">
-<<<<<<< HEAD
 <meta name="twitter:url" content="https://thereference.dev/">
-=======
-<meta name="twitter:url" content="https://example.com/">
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
 @endpush
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/max247rduzij-qAjJk-un3BI.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
@@ -67,17 +58,10 @@ at the coast of the Semantics, a large language ocean.">
                 <p><span id="label" >Phone:</span> <a href="tel://0027813230202">(+27) 81 323 0202</a></p>
             </div>
             <div class="col-md-3">
-<<<<<<< HEAD
                 <p><span id="label" >Email:</span> <a href="mailto:hey@thereference.dev">hey@thereference.dev</a></p>
             </div>
             <div class="col-md-3">
                 <p><span id="label" >Website</span> <a href="/">thereference.dev</a></p>
-=======
-                <p><span>Email:</span> <a href="mailto:info@yoursite.com">hey@yoursite.com</a></p>
-            </div>
-            <div class="col-md-3">
-                <p><span>Website</span> <a href="/">yoursite.com</a></p>
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
             </div>
         </div>
         <div class="row block-9 no-gutters">
@@ -103,13 +87,13 @@ at the coast of the Semantics, a large language ocean.">
             <div class="col-lg-6 d-flex">
                 {{-- <div id="map" class="bg-white">
                 </div> --}}
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52927.72857638981!2d18.652164407983882!3d-33.99296948910669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc51c27729aac1%3A0x55f542e3bb40a677!2sBlue%20Downs%2C%20Cape%20Town!5e0!3m2!1sen!2sza!4v1612409511493!5m2!1sen!2sza" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13242.796122306772!2d18.414693735434604!3d-33.923144883388964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc6763a3ee4fe9%3A0x95516cf23f5ee8f5!2sCape%20Town%20City%20Centre%2C%20Cape%20Town%2C%208000!5e0!3m2!1sen!2sza!4v1614537818561!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </div>
     @push('map-scripts')
-        <script src="/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-        <script src="/js/google-map.js"></script>
+        {{-- <script src="/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+        <script src="/js/google-map.js"></script> --}}
     @endpush
 </section>
 @push('json+ld')
@@ -117,29 +101,24 @@ at the coast of the Semantics, a large language ocean.">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-<<<<<<< HEAD
         "breadcrumb": "Home > About",
         "url": "https://thereference.dev/",
-=======
-        "breadcrumb": "Home",
-        "url": "http://example.com/",
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
         "logo": {
-            "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
+            "url": "{{asset('images/grey.png')}}",
             "width": "512",
             "@context": "http://schema.org",
             "@type": "ImageObject"
           },
-        "mainEntityOfPage": "https://example.com",
+        "mainEntityOfPage": "https://thereference.dev",
         "creator": {
             "@context": "https://schema.org",
             "@type": "Person",
-            "email": "mailto:jane-doe@xyz.edu",
-            "image": "janedoe.jpg",
-            "jobTitle": "Professor",
-            "name": "Jane Doe",
-            "telephone": "(425) 123-4567",
-            "url": "http://www.janedoe.com",
+            "email": "mailto:hey@thereference.dev",
+            "image": "{{asset('images/makhosi.JPG')}}",
+            "jobTitle": "Web Developer",
+            "name": "Makhosandile",
+            "telephone": "(+27) 81 323 0202",
+            "url": "http://www.github.com/makhosi6",
             "sameAs": [
                 "https://twitter.com/khosii",
                 "https://github.com/makhosi6",
@@ -149,10 +128,9 @@ at the coast of the Semantics, a large language ocean.">
         "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
         "keywords": [
             @foreach($categories as $cat)
-            "{!!$cat!!}",
+            "{!!$cat->category!!}",
             @endforeach
         ]
-
     }
 </script>
 @endpush

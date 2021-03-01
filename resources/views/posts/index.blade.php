@@ -16,9 +16,9 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:title" content="European Travel Destinations ">
     <meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
-    <meta name="twitter:image" content=" http://example.com/thumbnail.jpg">
+    <meta name="twitter:image" content="{{asset('images/grey.png')}}">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="https://example.com/">
+    <meta name="twitter:url" content="https://thereference.dev/">
     @endpush
 
     <div class="hero-wrap js-fullheight" style="background-image: url('images/max247rduzij-qAjJk-un3BI.jpg');"
@@ -120,27 +120,23 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "breadcrumb": "Home",
-<<<<<<< HEAD
         "url": "https://thereference.dev/",
-=======
-        "url": "http://example.com/",
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
         "logo": {
-            "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
+            "url": "{{asset('images/grey.png')}}",
             "width": "512",
             "@context": "http://schema.org",
             "@type": "ImageObject"
           },
-        "mainEntityOfPage": "https://example.com",
+        "mainEntityOfPage": "https://thereference.dev",
         "creator": {
             "@context": "https://schema.org",
             "@type": "Person",
-            "email": "mailto:jane-doe@xyz.edu",
-            "image": "janedoe.jpg",
-            "jobTitle": "Professor",
-            "name": "Jane Doe",
-            "telephone": "(425) 123-4567",
-            "url": "http://www.janedoe.com",
+            "email": "mailto:hey@thereference.dev",
+            "image": "{{asset('images/makhosi.JPG')}}",
+            "jobTitle": "Web Developer",
+            "name": "Makhosandile",
+            "telephone": "(+27) 81 323 0202",
+            "url": "http://www.github.com/makhosi6",
             "sameAs": [
                 "https://twitter.com/khosii",
                 "https://github.com/makhosi6",
@@ -153,7 +149,6 @@
             "{!!$category->category!!}"
             @endforeach
         ]
-
     }
 </script>
 <script type="application/ld+json">
@@ -168,34 +163,21 @@
                 "position": "{!!$key + 1!!}",
                 "mainEntityOfPage": {
                     "@type": "WebPage",
-<<<<<<< HEAD
                     "@id": "https://thereference.dev/articles/{!!$post->category!!}"
-=======
-                    "@id": "/articles/{!!$post->category!!}"
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
                 },
                 "articleSection": "{!!$post->category!!}",
                 "headline": "{!!$post->title!!}",
                 "datePublished": "{!!$post->created_at!!}",
                 "dateModified": "{!!$post->updated_at!!}",
-<<<<<<< HEAD
                 "image": "https://thereference.dev/storage/cover_images/{{$post->cover_image}}",
                 "url": "https://thereference.dev/articles/{!!$post->slug!!}",
-=======
-                "image": "/storage/cover_images/{{$post->cover_image}}",
-                "url": "/{!!$post->category!!}/{!!$post->slug!!}",
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
                 "author": "Makhosandile",
                 "publisher": {
                     "@context": "https://schema.org",
                     "@type": "WebSite",
-<<<<<<< HEAD
                     "url": "https://thereference.dev/",
-=======
-                    "url": "http://example.com/",
->>>>>>> parent of e24bfc0... Sunday 02/21/2021 00:38 - SEO, Optimization
                     "logo": {
-                        "url": "https://rich-snippets.io/wp-content/uploads/2017/08/cropped-rich-snippets-icon.jpg",
+                        "url": "{{asset('images/grey.png')}}",
                         "width": "512",
                         "@context": "http://schema.org",
                         "@type": "ImageObject"
@@ -207,12 +189,12 @@
                 "creator": {
                     "@context": "https://schema.org",
                     "@type": "Person",
-                    "email": "mailto:jane-doe@xyz.edu",
-                    "image": "janedoe.jpg",
+                    "email": "mailto:hey@thereference.dev",
+                    "image": "{{asset('images/makhosi.JPG')}}",
                     "jobTitle": "Web Developer",
                     "name": "Makhosandile",
-                    "telephone": "(425) 123-4567",
-                    "url": "http://www.janedoe.com",
+                    "telephone": "(+27) 81 323 0202",
+                    "url": "http://www.github.com/makhosi6",
                     "sameAs": [
                         "https://twitter.com/khosii",
                     ]
