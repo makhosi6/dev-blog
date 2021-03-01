@@ -18,7 +18,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--GA-->
-    <<meta name="google-site-verification" content="9PzfTAkjoevey29gxuWWHvRSlYRK3FqdbNvn_GZSe6Q" />
+    <meta name="google-site-verification" content="9PzfTAkjoevey29gxuWWHvRSlYRK3FqdbNvn_GZSe6Q" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHPVF1EKZM"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
