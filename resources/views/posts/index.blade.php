@@ -6,16 +6,14 @@
     @endpush
     @push('page-meta')
     <title>Reference.dev | home</title>
-    <meta name="description" content="Far far away, behind the word mountains, far from the countries Vokalia and
-    Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
-    at the coast of the Semantics, a large language ocean." />
-    <meta property="og:title" content="European Travel Destinations">
-    <meta property="og:description" content="Offering tour packages for individuals or groups.">
+    <meta name="description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics." />
+    <meta property="og:title" content="thereference.dev">
+    <meta property="og:description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
     <meta property="og:image" content="{{asset('images/grey.png')}}">
     <meta property="og:url" content="https://thereference.dev/">
     <meta property="og:type" content="website" />
-    <meta name="twitter:title" content="European Travel Destinations ">
-    <meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
+    <meta name="twitter:title" content="thereference.dev">
+    <meta name="twitter:description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
     <meta name="twitter:image" content="{{asset('images/grey.png')}}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="https://thereference.dev/">
@@ -33,9 +31,9 @@
                     <div class="row">
                         <div class="col-md-7">
                             <div class="text">
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                                    Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
-                                    at the coast of the Semantics, a large language ocean.</p>
+                                <p>
+                                    I'm an aspiring web developer. And i just thought why not document my journey, while helping others get over entomophobia [fear of bugs]. Here i post on point web development how-tos, references, tutorial, examples and guides. 
+                                </p>
                                 <div class="mouse">
                                     <a href="#articles" class="mouse-icon">
                                         <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
@@ -142,7 +140,7 @@
                 "https://github.com/makhosi6",
             ]
         },
-        "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+        "description": "On point web development how-tos, references, tutorial, examples and guides. Covering different topics.",
         "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
         "keywords": [
             @foreach($categories as $category)
@@ -197,6 +195,7 @@
                     "url": "http://www.github.com/makhosi6",
                     "sameAs": [
                         "https://twitter.com/khosii",
+                        "http://www.github.com/makhosi6"
                     ]
                 },
                 "about": {

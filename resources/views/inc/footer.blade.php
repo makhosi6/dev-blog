@@ -4,8 +4,7 @@
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="logo"><a href="#">Reference<span>dev</span>.</a></h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts.</p>
+                    <p>I'm an aspiring web developer. And i just thought why not document my journey, while helping others get over entomophobia [fear of bugs]. Here i post on-point web development how-tos, references, tutorial, examples and guides.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="#" rel="nofollow" target="_blank"><span class="icon-twitter"></span></a></li>
                         <li class="ftco-animate"><a href="#" rel="nofollow" target="_blank"><span class="icon-linkedin"></span></a></li>
@@ -95,13 +94,14 @@
                             <li>
                                 <span class="icon icon-map-marker"></span><span class="text">
                                     <address>
-                                        198 West 21th Street, Suite 721 New York NY 10016
+                                        PO Box 1003 Cape Town 8000
                                     </address>    
                                 </span>
                             </li>
-                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">(+27) 81 323 0202</span></a></li>
                             <li><a href="#"><span class="icon icon-envelope"></span><span
-                                        class="text">hey@yourdomain.com</span></a></li>
+                                        class="text">hey@thereference.dev
+                                    </span></a></li>
                         </ul>
                     </div>
                 </div>

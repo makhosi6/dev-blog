@@ -5,16 +5,14 @@
 @endpush
 @push('page-meta')
 <title>Reference.dev | {!!$name!!}</title>
-<meta name="description" content="Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
-at the coast of the Semantics, a large language ocean.">
+<meta name="description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
 <meta property="og:title" content="{!!$name!!}">
-<meta property="og:description" content="Offering tour packages for individuals or groups.">
+<meta property="og:description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics. ">
 <meta property="og:image" content="https://thereference.dev/storage/cover_images/thumbnail.jpg">
 <meta property="og:url" content="https://thereference.dev/articles/{!!$name!!}">
 <meta property="og:type" content="webpage" />
 <meta name="twitter:title" content="{!!$name!!}">
-<meta name="twitter:description" content=" Offering tour packages for individuals or groups.">
+<meta name="twitter:description" content=" On point web development how-tos, references, tutorial, examples and guides. Covering different topics. ">
 <meta name="twitter:image" content=" https://thereference.dev/thumbnail.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:url" content="https://example.com/articles/{!!$name!!}">
@@ -124,9 +122,10 @@ at the coast of the Semantics, a large language ocean.">
             "url": "http://www.github.com/makhosi6",
             "sameAs": [
                 "https://twitter.com/khosii",
+                "https://github.com/makhosi6",
             ]
         },
-        "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+        "description": "On point web development how-tos, references, tutorial, examples and guides. Covering different topics.",
         "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
         "keywords": ["{!!$name!!}"]
     }

@@ -145,6 +145,7 @@
         "url": "http://www.github.com/makhosi6",
         "sameAs": [
             "https://twitter.com/khosii",
+            "http://www.github.com/makhosi6"
         ]
     }
     "about": {
