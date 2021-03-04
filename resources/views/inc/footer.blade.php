@@ -4,7 +4,7 @@
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="logo"><a href="#">Reference<span>dev</span>.</a></h2>
-                    <p>I'm an aspiring web developer. And i just thought why not document my journey, while helping others get over entomophobia [fear of bugs]. Here i post on-point web development how-tos, references, tutorial, examples and guides.</p>
+                    <p>I'm an aspiring web developer. Here I post on-point web development how-tos, references, tutorial, examples and guides.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="#" rel="nofollow" target="_blank"><span class="icon-twitter"></span></a></li>
                         <li class="ftco-animate"><a href="#" rel="nofollow" target="_blank"><span class="icon-linkedin"></span></a></li>
@@ -116,7 +116,7 @@
                     All imagery, design licensed under the <a class="line" href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="nofollow">CC BY 3.0</a>.
                 </p>
                 <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    {{-- <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> --}}
                     Copyright &copy;
                     <script>
                         document.write(new Date().getFullYear());

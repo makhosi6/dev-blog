@@ -9,12 +9,12 @@
     <meta name="description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics." />
     <meta property="og:title" content="thereference.dev">
     <meta property="og:description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
-    <meta property="og:image" content="{{asset('images/grey.png')}}">
+    <meta property="og:image" content="{{'images/grey.png'}}">
     <meta property="og:url" content="https://thereference.dev/">
     <meta property="og:type" content="website" />
     <meta name="twitter:title" content="thereference.dev">
     <meta name="twitter:description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
-    <meta name="twitter:image" content="{{asset('images/grey.png')}}">
+    <meta name="twitter:image" content="{{'images/grey.png'}}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="https://thereference.dev/">
     @endpush
@@ -32,7 +32,7 @@
                         <div class="col-md-7">
                             <div class="text">
                                 <p>
-                                    I'm an aspiring web developer. And i just thought why not document my journey, while helping others get over entomophobia [fear of bugs]. Here i post on point web development how-tos, references, tutorial, examples and guides. 
+                                    I'm an aspiring web developer. And I just thought why not document my journey, while helping others get over entomophobia [fear of bugs]. Here i post on-point web development how-tos, references, tutorial, examples and guides. 
                                 </p>
                                 <div class="mouse">
                                     <a href="#articles" class="mouse-icon">
