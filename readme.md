@@ -1,7 +1,7 @@
 <p align="center"><img alt="logo here" src="https://raw.githubusercontent.com/makhosi6/dev-blog/main/public/images/black.png"></p>
 
 <p align="center">
-<a alt="thumbnail" href="https://thereference.dev"><img src="https://www.yumyumvideos.com/wp-content/uploads/2020/08/pasted-image-0-8.png" ></a>
+<a alt="thumbnail" href="https://thereference.dev"><img src="https://raw.githubusercontent.com/makhosi6/dev-blog/main/public/images/thumbnail.jpg" ></a>
 </p>
 
 ## thereference.dev.
