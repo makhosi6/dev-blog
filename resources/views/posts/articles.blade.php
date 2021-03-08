@@ -61,16 +61,25 @@
                                 <span itemprop="category" class="subheading">{!!$post->category!!}</span>
                                 <h2 itemprop="headline" ><a href="/article/{!!$post->slug!!}">{!!$post->title!!}</a></h2>
                                 <ul class="media-social list-unstyled">
-                                    <li class="ftco-animate"><a href="#" rel="nofollow" target="_blank"><span
-                                                class="icon-twitter"></span></a></li>
-                                    <li class="ftco-animate"><a href="#" rel="nofollow" target="_blank"><span
-                                                class="icon-linkedin"></span></a></li>
-                                    <li class="ftco-animate"><a href="#" rel="nofollow" target="_blank"><span
-                                                class="icon-instagram"></span></a></li>
+                                    <li class="ftco-animate">
+                                        <a href="http://twitter.com/reference_dev" rel="nofollow" target="_blank">
+                                            <span class="icon-twitter"></span>
+                                        </a>
+                                    </li>
+                                    <li class="ftco-animate">
+                                        <a href="https://github.com/makhosi6" rel="nofollow" target="_blank">
+                                            <span class="icon-github"></span>
+                                        </a>
+                                    </li>
+                                    <li class="ftco-animate">
+                                        <a href="https://instagram.com/reference_dev" rel="nofollow" target="_blank">
+                                            <span class="icon-instagram"></span>
+                                        </a>
+                                    </li>
                                 </ul>
                                 <div class="meta">
-                                    <p class="mb-0"><a><time datetime="{!!$post->created_at!!} "itemprop="datePublished">{!!$post->date!!}
-                                            </time></a> | <a>1 min read</a></p>
+                                    <p class="mb-0"><a href="javascript:void(0)"><time datetime="{!!$post->created_at!!} "itemprop="datePublished">{!!$post->date!!}
+                                            </time></a> | <a href="javascript:void(0)">1 min read</a></p>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +90,7 @@
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
                         <div class="text p-4 float-right d-block">
-                            <h3 class="heading mb-3 no-articles"><a>No Articles.</a></h3>
+                            <h3 class="heading mb-3 no-articles"><a href="javascript:void(0)">No Articles.</a></h3>
                         </div>
                     </div>
                 </div>

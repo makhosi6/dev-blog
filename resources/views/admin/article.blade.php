@@ -61,7 +61,7 @@
                             <div class="meta">
                                 <div><a class="caps">{!!$article->date!!}</a></div>
                                 <div><a class="caps">{!!$article->category!!}</a></div>
-                                {{-- <div><a href="#"></span> 19</a></div> --}}
+                                {{-- <div><a href="javascript:void(0)"></span> 19</a></div> --}}
                             </div>
                         </div>
                     </div>

@@ -45,7 +45,7 @@
                                             <h2><a href="/article/{!!$post->slug!!}">{!!$post->title!!}</a></h2>
                                            
                                             <div class="meta">
-                                                <p class="mb-0"><a>{!!$post->date!!}</a> | <a>12 min read</a></p>
+                                                <p class="mb-0"><a href="javascript:void(0)">{!!$post->date!!}</a> | <a href="javascript:void(0)">12 min read</a></p>
                                             </div>
                                             <div class="grd-btn m-4">
                                                 <span>
@@ -71,7 +71,7 @@
                     <div class="col-md-4 d-flex ftco-animate">
                         <div class="blog-entry justify-content-end">
                             <div class="text p-4 float-right d-block">
-                                <h3 class="heading mb-3 no-articles"><a href="#">No Articles.</a></h3>
+                                <h3 class="heading mb-3 no-articles"><a href="javascript:void(0)">No Articles.</a></h3>
                             </div>
                         </div>
                     </div>

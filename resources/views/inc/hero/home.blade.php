@@ -10,7 +10,7 @@
                         <div class="text">
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                             <div class="mouse">
-                                <a href="#" class="mouse-icon">
+                                <a href="javascript:void(0)" class="mouse-icon">
                                     <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
                                 </a>
                             </div>

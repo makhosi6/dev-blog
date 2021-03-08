@@ -11,7 +11,7 @@
                         <a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a>
                     </span>
                     <span class="mr-2">
-                        <a href="#">Register <i class="ion-ios-arrow-forward"></i></a>
+                        <a href="javascript:void(0)">Register <i class="ion-ios-arrow-forward"></i></a>
                     </span>
                 </p>
             </div>

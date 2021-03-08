@@ -5,15 +5,19 @@
     <meta name="robots" content="index, follow">
     @endpush
     @push('page-meta')
-    <title>Reference.dev | home</title>
-    <meta name="description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics." />
+  
+    <title>Home - thereference.dev</title>
+    <meta name="description"
+        content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics." />
     <meta property="og:title" content="thereference.dev">
-    <meta property="og:description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
+    <meta property="og:description"
+        content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
     <meta property="og:image" content="{{'images/grey.png'}}">
     <meta property="og:url" content="https://thereference.dev/">
     <meta property="og:type" content="website" />
     <meta name="twitter:title" content="thereference.dev">
-    <meta name="twitter:description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
+    <meta name="twitter:description"
+        content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
     <meta name="twitter:image" content="{{'images/grey.png'}}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="https://thereference.dev/">
@@ -32,7 +36,9 @@
                         <div class="col-md-7">
                             <div class="text">
                                 <p>
-                                    I'm an aspiring web developer. And I just thought why not document my journey, while helping others get over entomophobia [fear of bugs]. Here i post on-point web development how-tos, references, tutorial, examples and guides. 
+                                    I'm an aspiring web developer. And I just thought why not document my journey, while
+                                    helping others get over entomophobia [fear of bugs]. Here I post on-point web
+                                    development how-tos, references, tutorial, examples and guides.
                                 </p>
                                 <div class="mouse">
                                     <a href="#articles" class="mouse-icon">
@@ -50,7 +56,7 @@
 </section>
 <section id="articles" class="ftco-section bg-light">
     <div class="container">
-        <div class="row d-flex body-wrapper">
+        <section class="row d-flex body-wrapper">
             @if (count($posts)> 0)
             @foreach ($posts as $post)
 
@@ -85,8 +91,8 @@
                         <p itemprop="alternativeHeadline" class="ellipsis" title="{!!$post->{'sub-title'}!!}">
                             {!!$post->{'sub-title'}!!}</p>
                         <p><a itemprop="url" href="/article/{!!$post->slug!!}" class="btn-custom"><span
-                                    class="ion-ios-arrow-round-forward mr-3"></span>Read
-                                more</a></p>
+                                    class="ion-ios-arrow-round-forward mr-3"></span>Read more</a>
+                            </p>
                     </div>
                 </div>
             </article>
@@ -96,12 +102,12 @@
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
                     <div class="text p-4 float-right d-block">
-                        <h3 class="heading mb-3 no-articles"><a href="#">No Articles.</a></h3>
+                        <h3 class="heading mb-3 no-articles"><a href="javascript:void(0)">No Articles.</a></h3>
                     </div>
                 </div>
             </div>
             @endif
-        </div>
+        </section>
         <div class="row mt-5">
             <div class="col center-pager">
                 <div class="block-27">
@@ -124,7 +130,7 @@
             "width": "512",
             "@context": "http://schema.org",
             "@type": "ImageObject"
-          },
+        },
         "mainEntityOfPage": "https://thereference.dev",
         "creator": {
             "@context": "https://schema.org",
@@ -179,7 +185,7 @@
                         "width": "512",
                         "@context": "http://schema.org",
                         "@type": "ImageObject"
-                      },
+                    },
                     "sameAs": [
                         "https://twitter.com/khosii",
                     ]

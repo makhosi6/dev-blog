@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
-
 <head>
-  
     @stack('post-meta')
     @stack('page-meta')
     @stack('index')
@@ -30,22 +28,6 @@
 
         gtag('config', 'G-QHPVF1EKZM');
     </script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-XXXXX-Y', 'auto');
-        ga('send', 'pageview');
-    </script>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -59,6 +41,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+
+
     <link rel="manifest" href="/manifest.json">
     <link href="https://thereference.dev/" rel="canonical">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -73,7 +58,19 @@
     <link rel="stylesheet" href="{{asset('css/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('css/icomoon.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    
 
+    <style>
+        .ftco-footer .ftco-footer-widget ul li, .ftco-footer .ftco-footer-widget ul li a {
+            min-height: 48px !important;
+        }
+        .meta > div  {
+            color: rgb(148 148 148) !important;
+        }
+        .subheading{
+            color: rgb(0 0 0 / 57%) !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -110,6 +107,7 @@
     @stack('map-scripts')
     @stack('editor-scripts')
     @stack('json+ld')
+
 
 
 </body>
