@@ -47,7 +47,7 @@
     <link rel="manifest" href="/manifest.json">
     <link href="https://thereference.dev/" rel="canonical">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> --}}
     <link rel="stylesheet" href="{{asset('css/animate.css')}}">
     <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
     {{-- <link rel="stylesheet" href="{{asset('css/open-iconic-bootstrap.min.css')}}"> --}}
@@ -59,7 +59,6 @@
     <link rel="stylesheet" href="{{asset('css/icomoon.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     
-
     <style>
         .ftco-footer .ftco-footer-widget ul li, .ftco-footer .ftco-footer-widget ul li a {
             min-height: 48px !important;
@@ -104,10 +103,23 @@
     <script src="/js/jquery.animateNumber.min.js"></script>
     <script src="/js/scrollax.min.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/service-worker.js"></script>
     @stack('map-scripts')
     @stack('editor-scripts')
     @stack('json+ld')
-
+    <script>
+        if ('serviceWorker' in navigator ) {
+          window.addEventListener('load', function() {
+              navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                  // Registration was successful
+                  console.log('ServiceWorker registration successful with scope: ', registration.scope);
+              }, function(err) {
+                  // registration failed :
+                  console.log('ServiceWorker registration failed: ', err);
+              });
+          });
+      }
+</script>
 
 
 </body>
