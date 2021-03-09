@@ -8,16 +8,16 @@
   
     <title>Home - thereference.dev</title>
     <meta name="description"
-        content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics." />
+        content="On point web development how-tos, references, tutorials, examples and guides. Covering different topics." />
     <meta property="og:title" content="thereference.dev">
     <meta property="og:description"
-        content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
+        content="On point web development how-tos, references, tutorials, examples and guides. Covering different topics.">
     <meta property="og:image" content="{{'images/grey.png'}}">
     <meta property="og:url" content="https://thereference.dev/">
     <meta property="og:type" content="website" />
     <meta name="twitter:title" content="thereference.dev">
     <meta name="twitter:description"
-        content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
+        content="On point web development how-tos, references, tutorials, examples and guides. Covering different topics.">
     <meta name="twitter:image" content="{{'images/grey.png'}}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="https://thereference.dev/">
@@ -38,7 +38,7 @@
                                 <p>
                                     I'm an aspiring web developer. And I just thought why not document my journey, while
                                     helping others get over entomophobia [fear of bugs]. Here I post on-point web
-                                    development how-tos, references, tutorial, examples and guides.
+                                    development how-tos, references, tutorials, examples and guides.
                                 </p>
                                 <div class="mouse">
                                     <a href="#articles" class="mouse-icon">
@@ -102,7 +102,7 @@
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
                     <div class="text p-4 float-right d-block">
-                        <h3 class="heading mb-3 no-articles"><a href="javascript:void(0)">No Articles.</a></h3>
+                        <h3 class="heading mb-3 no-articles"><a href="#">No Articles.</a></h3>
                     </div>
                 </div>
             </div>
@@ -146,11 +146,11 @@
                 "https://github.com/makhosi6",
             ]
         },
-        "description": "On point web development how-tos, references, tutorial, examples and guides. Covering different topics.",
+        "description": "On point web development how-tos, references, tutorials, examples and guides. Covering different topics.",
         "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
         "keywords": [
             @foreach($categories as $category)
-            "{!!$category->category!!}"
+            "{!!$category->category!!}",
             @endforeach
         ]
     }

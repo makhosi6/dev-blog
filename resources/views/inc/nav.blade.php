@@ -9,7 +9,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
                 <li class="nav-item dropdown">
-                    <a  href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown" rel="noopener">Articles
+                    <a  href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" rel="noopener">Articles
                     <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       @foreach ($categories as $category)

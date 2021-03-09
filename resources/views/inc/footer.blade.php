@@ -5,20 +5,20 @@
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="logo"><a href="/">Reference<span>dev</span>.</a></h2>
                     <p>I'm an aspiring web developer. Here I post on-point web development how-tos, references,
-                        tutorial, examples and guides.</p>
+                        tutorials, examples and guides.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate">
-                            <a href="http://twitter.com/reference_dev" rel="nofollow" target="_blank">
+                            <a href="http://twitter.com/reference_dev" rel="noopener" target="_blank">
                                 <span class="icon-twitter"></span>
                             </a>
                         </li>
                         <li class="ftco-animate">
-                            <a href="https://github.com/makhosi6" rel="nofollow" target="_blank">
+                            <a href="https://github.com/makhosi6" rel="noopener" target="_blank">
                                 <span class="icon-github"></span>
                             </a>
                         </li>
                         <li class="ftco-animate">
-                            <a href="https://instagram.com/reference_dev" rel="nofollow" target="_blank">
+                            <a href="https://instagram.com/reference_dev" rel="noopener" target="_blank">
                                 <span class="icon-instagram"></span>
                             </a>
                         </li>
@@ -37,7 +37,7 @@
                             <h3 class="heading"><a href="/articles/{!!$article->slug!!}">{!!$article->title!!}</a></h3>
                             <div class="meta">
                                 <div>
-                                    <a href="javascript:void(0)">{!!$article->date!!}</a>
+                                    <a href="#">{!!$article->date!!}</a>
                                 </div>
                                 <div>
                                     <a href="/article/{{$article->category}}" class="caps">{!!$article->category!!}</a>
@@ -54,7 +54,7 @@
                     <ul class="list-unstyled">
                         <li><a href="/" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Home</a>
                         </li>
-                        {{-- <li><a href="javascript:void(0)" class="py-1 d-block"><span
+                        {{-- <li><a href="#" class="py-1 d-block"><span
                                     class="ion-ios-arrow-forward mr-3"></span>Articles</a></li> --}}
                         <style>
                             li {
@@ -89,7 +89,7 @@
                             }
                         </style>
                         <li class="itm">
-                            <a href="javascript:void(0)"><span class="ion-ios-arrow-forward mr-3"></span>Articles</a>
+                            <a href="#"><span class="ion-ios-arrow-forward mr-3"></span>Articles</a>
                             <ul class="dropdown caps">
                                 @foreach ($categories as $category)
                                 <li><a href="/articles/{!!$category->category!!}">{!!$category->category!!}</a></li>

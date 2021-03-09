@@ -4,15 +4,15 @@
 <meta name="robots" content="index, follow">
 @endpush
 @push('page-meta')
-<title>Reference.dev | {!!$name!!}</title>
-<meta name="description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
+<title>{!!$name!!} - thereference.dev</title>
+<meta name="description" content="On point web development how-tos, references, tutorials, examples and guides. Covering different topics.">
 <meta property="og:title" content="{!!$name!!}">
-<meta property="og:description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics. ">
+<meta property="og:description" content="On point web development how-tos, references, tutorials, examples and guides. Covering different topics. ">
 <meta property="og:image" content="https://thereference.dev/storage/cover_images/thumbnail.jpg">
 <meta property="og:url" content="https://thereference.dev/articles/{!!$name!!}">
 <meta property="og:type" content="webpage" />
 <meta name="twitter:title" content="{!!$name!!}">
-<meta name="twitter:description" content=" On point web development how-tos, references, tutorial, examples and guides. Covering different topics. ">
+<meta name="twitter:description" content=" On point web development how-tos, references, tutorials, examples and guides. Covering different topics. ">
 <meta name="twitter:image" content=" https://thereference.dev/thumbnail.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:url" content="https://example.com/articles/{!!$name!!}">
@@ -78,8 +78,8 @@
                                     </li>
                                 </ul>
                                 <div class="meta">
-                                    <p class="mb-0"><a href="javascript:void(0)"><time datetime="{!!$post->created_at!!} "itemprop="datePublished">{!!$post->date!!}
-                                            </time></a> | <a href="javascript:void(0)">1 min read</a></p>
+                                    <p class="mb-0"><a href="#"><time datetime="{!!$post->created_at!!} "itemprop="datePublished">{!!$post->date!!}
+                                            </time></a> | <a href="#">1 min read</a></p>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
                         <div class="text p-4 float-right d-block">
-                            <h3 class="heading mb-3 no-articles"><a href="javascript:void(0)">No Articles.</a></h3>
+                            <h3 class="heading mb-3 no-articles"><a href="#">No Articles.</a></h3>
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
                 "https://github.com/makhosi6",
             ]
         },
-        "description": "On point web development how-tos, references, tutorial, examples and guides. Covering different topics.",
+        "description": "On point web development how-tos, references, tutorials, examples and guides. Covering different topics.",
         "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
         "keywords": ["{!!$name!!}"]
     }

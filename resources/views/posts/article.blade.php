@@ -87,14 +87,14 @@
                             <h3 class="heading"><a href="/article/{!!$article->slug!!}">{!!$article->title!!}</a></h3>
                             <div class="meta">
                                 <div>
-                                    <a href="javascript:void(0)" class="caps">
+                                    <a href="#" class="caps">
                                         <time datetime="{!!$post->created_at!!}">{!!$article->date!!}</time>
                                     </a>
                                 </div>
                                 <div>
-                                    <a href="javascript:void(0)" class="caps">{!!$article->category!!}</a>
+                                    <a href="#" class="caps">{!!$article->category!!}</a>
                                 </div>
-                                {{-- <div><a href="javascript:void(0)"></span> 19</a></div> --}}
+                                {{-- <div><a href="#"></span> 19</a></div> --}}
                             </div>
                         </div>
                     </div>

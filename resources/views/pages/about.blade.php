@@ -1,16 +1,16 @@
 @extends('layout.app')
 @section('content')
 @push('page-meta')
-<title>About - thereference.dev</title>
-<meta name="description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
+<title>thereference. - About</title>
+<meta name="description" content="On point web development how-tos, references, tutorials, examples and guides. Covering different topics.">
 <meta property="og:title" content="thereference.dev">
-<meta property="og:description" content="On point web development how-tos, references, tutorial, examples and guides. Covering different topics.">
+<meta property="og:description" content="On point web development how-tos, references, tutorials, examples and guides. Covering different topics.">
 <meta property="og:image" content="{{'images/grey.png'}}">
 <meta property="og:url" content="https://thereference.dev/">
 <meta property="og:type" content="website" />
 
 <meta name="twitter:title" content="thereference.dev">
-<meta name="twitter:description" content="On point web development how-tos, references, tutorial, examples and guides.">
+<meta name="twitter:description" content="On point web development how-tos, references, tutorials, examples and guides.">
 <meta name="twitter:image" content="{{'images/grey.png'}}">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:url" content="https://thereference.dev/">
@@ -53,7 +53,7 @@
                     <div class="col-md-12 heading-section ftco-animate">
                         <span class="subheading">Welcome to</span>
                         <h2 class="mb-4">thereference.dev </h2>
-                        {{-- <p>On point web development how-tos, references, tutorial, examples and guides.</p> --}}
+                        {{-- <p>On point web development how-tos, references, tutorials, examples and guides.</p> --}}
                         <div class="tabulation-2 mt-4">
                             <ul class="nav nav-pills nav-fill d-md-flex d-block">
                                 <li class="nav-item mb-md-0 mb-2">
@@ -68,13 +68,13 @@
                             </ul>
                             <div class="tab-content bg-light rounded mt-2">
                                 <div class="tab-pane container p-0 active" id="home1">
-                                    <p>I'm an aspiring web developer. And I just thought why not document my journey, while helping others get over entomophobia [fear of bugs]. Here I post on point web development how-tos, references, tutorial, examples and guides. </p>
+                                    <p>I'm an aspiring web developer. And I just thought why not document my journey, while helping others get over entomophobia [fear of bugs]. Here I post on point web development how-tos, references, tutorials, examples and guides. </p>
                                 </div>
                                 <div class="tab-pane container p-0 fade" id="home2">
-                                    <p>I'm an aspiring web developer. And I just thought why not document my journey, while helping others get over entomophobia [fear of bugs]. Here I post on point web development how-tos, references, tutorial, examples and guides. </p>
+                                    <p>I'm an aspiring web developer. And I just thought why not document my journey, while helping others get over entomophobia [fear of bugs]. Here I post on point web development how-tos, references, tutorials, examples and guides. </p>
                                 </div>
                                 <div class="tab-pane container p-0 fade" id="home3">
-                                    <p>I'm an aspiring web developer. And I just thought why not document my journey, while helping others get over entomophobia [fear of bugs]. Here I post on point web development how-tos, references, tutorial, examples and guides. </p>
+                                    <p>I'm an aspiring web developer. And I just thought why not document my journey, while helping others get over entomophobia [fear of bugs]. Here I post on point web development how-tos, references, tutorials, examples and guides. </p>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
                 "https://github.com/makhosi6",
             ]
         },
-        "description": "On point web development how-tos, references, tutorial, examples and guides. Covering different topics.",
+        "description": "On point web development how-tos, references, tutorials, examples and guides. Covering different topics.",
         "license": "https://raw.githubusercontent.com/makhosi6/LICENSE/main/LICENSE",
         "keywords": [
             @foreach($categories as $cat)

@@ -41,23 +41,29 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    
-
 
     <link rel="manifest" href="/manifest.json">
     <link href="https://thereference.dev/" rel="canonical">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" onload="this.rel='stylesheet'" />
     {{-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> --}}
-    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
-    {{-- <link rel="stylesheet" href="{{asset('css/open-iconic-bootstrap.min.css')}}"> --}}
-    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('css/aos.css')}}">
-    <link rel="stylesheet" href="{{asset('css/ionicons.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('css/icomoon.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="preload" href="{{asset('css/animate.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset('css/animate.css')}}"></noscript>
+    <link rel="preload" href="{{asset('css/owl.carousel.min.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}"></noscript>
+    {{-- <link rel="stylesheet" href="{{asset('css/open-iconic-bootstrap.min.css')}}"> --}}
+    <link rel="preload" href="{{asset('css/owl.theme.default.min.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}"></noscript>
+    <link rel="preload" href="{{asset('css/magnific-popup.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}"></noscript>
+    <link rel="preload" href="{{asset('css/aos.css')}}">
+    <noscript><link rel="stylesheet" href="{{asset('css/aos.css')}}"></noscript>
+    <link rel="preload" href="{{asset('css/ionicons.min.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset('css/ionicons.min.css')}}"></noscript>
+    <link rel="preload" href="{{asset('css/flaticon.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset('css/flaticon.css')}}"></noscript>
+    <link rel="preload" href="{{asset('css/icomoon.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{asset('css/icomoon.css')}}"></noscript>
     
     <style>
         .ftco-footer .ftco-footer-widget ul li, .ftco-footer .ftco-footer-widget ul li a {
@@ -103,23 +109,11 @@
     <script src="/js/jquery.animateNumber.min.js"></script>
     <script src="/js/scrollax.min.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/service-worker.js"></script>
+    {{-- <script src="/service-worker.js"></script> --}}
     @stack('map-scripts')
     @stack('editor-scripts')
     @stack('json+ld')
-    <script>
-        if ('serviceWorker' in navigator ) {
-          window.addEventListener('load', function() {
-              navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                  // Registration was successful
-                  console.log('ServiceWorker registration successful with scope: ', registration.scope);
-              }, function(err) {
-                  // registration failed :
-                  console.log('ServiceWorker registration failed: ', err);
-              });
-          });
-      }
-</script>
+
 
 
 </body>
