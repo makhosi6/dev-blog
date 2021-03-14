@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-lg-8 ftco-animate">
                 <p class="mb-5">
-                    <img src="/storage/cover_images/{{$post->cover_image}}" alt="{{$post->title}}" class="img-fluid">
+                    <img src="/storage/images/{{$post->cover_image}}" alt="{{$post->title}}" class="img-fluid">
                 </p>
                 <h2 class="mb-3">{!!$post->{'sub-title'}!!}</h2>
                 <div class="body">
@@ -55,7 +55,7 @@
                     <h3>Recent Blog</h3>
                     @foreach ($articles as $article)
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url('/storage/cover_images/{{$article->cover_image}}');"></a>
+                        <a class="blog-img mr-4" style="background-image: url('/storage/images/{{$article->cover_image}}');"></a>
                         <div class="text">
                             <h3 class="heading"><a href="/article/{!!$article->slug!!}">{!!$article->title!!}</a></h3>
                             <div class="meta">

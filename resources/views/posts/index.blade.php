@@ -62,9 +62,10 @@
 
             <article itemscope itemtype="https://schema.org/Article" class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a itemprop="image" href="/article/{!!$post->slug!!}" class="block-20" role="img"
+                    <a itemprop="image" href="/article/{!!$post->slug!!}" class="laxy-img block-20" role="img"
                         aria-label="{!!$post->title!!}"
-                        style='background-image: url("/storage/cover_images/{{$post->cover_image}}");'>
+                        data-img="/storage/images/{{$post->cover_image}}"
+                        style='background-image: url("/images/loading.gif");'>
                     </a>
                     <div class="text p-4 float-right d-block">
                         <time itemprop="datePublished" datetime="{!!$post->created_at!!}"
@@ -173,7 +174,7 @@
                 "headline": "{!!$post->title!!}",
                 "datePublished": "{!!$post->created_at!!}",
                 "dateModified": "{!!$post->updated_at!!}",
-                "image": "https://thereference.dev/storage/cover_images/{{$post->cover_image}}",
+                "image": "https://thereference.dev/storage/images/thumb.{{$post->cover_image}}",
                 "url": "https://thereference.dev/articles/{!!$post->slug!!}",
                 "author": "Makhosandile",
                 "publisher": {

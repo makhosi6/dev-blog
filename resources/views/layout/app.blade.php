@@ -20,12 +20,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHPVF1EKZM"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
         gtag('config', 'G-QHPVF1EKZM');
     </script>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -44,7 +42,7 @@
 
     <link rel="manifest" href="/manifest.json">
     <link href="https://thereference.dev/" rel="canonical">
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" onload="this.rel='stylesheet'" />
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     {{-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> --}}
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="preload" href="{{asset('css/animate.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -65,6 +63,7 @@
     <link rel="preload" href="{{asset('css/icomoon.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{asset('css/icomoon.css')}}"></noscript>
     
+    
     <style>
         .ftco-footer .ftco-footer-widget ul li, .ftco-footer .ftco-footer-widget ul li a {
             min-height: 48px !important;
@@ -74,6 +73,9 @@
         }
         .subheading{
             color: rgb(0 0 0 / 57%) !important;
+        }
+        .laxy-img {
+            background-color:#d2d2d275 !important;
         }
     </style>
 </head>
@@ -96,6 +98,7 @@
                 stroke="#F96D00" />
         </svg>
     </div>
+    <script src="/js/lazyload.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery-migrate-3.0.1.min.js"></script>
     <script src="/js/popper.min.js"></script>
@@ -109,7 +112,6 @@
     <script src="/js/jquery.animateNumber.min.js"></script>
     <script src="/js/scrollax.min.js"></script>
     <script src="/js/main.js"></script>
-    {{-- <script src="/service-worker.js"></script> --}}
     @stack('map-scripts')
     @stack('editor-scripts')
     @stack('json+ld')

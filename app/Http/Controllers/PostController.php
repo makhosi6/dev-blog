@@ -7,7 +7,7 @@ use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Image;
+use Intervention\Image\Facades\Image;
 
 class PostController extends Controller
 {
@@ -68,13 +68,13 @@ class PostController extends Controller
             // Filename to store
             $fileNameToStore = $filename . '_' . time() . '.' . $extension;
             // Upload Image
-            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+            $path = $request->file('cover_image')->storeAs('public/images/', $fileNameToStore);
 
-            // // make thumbnails
-            // $thumbStore = 'thumb.' . $filename . '_' . time() . '.' . $extension;
-            // $thumb = Image::make($request->file('cover_image')->getRealPath());
-
-            // $thumb->save('storage/cover_images/' . $thumbStore);
+            // make thumbnails
+            $thumbStore = 'thumb.' . $filename . '_' . time() . '.' . $extension;
+            $thumb = Image::make($request->file('cover_image')->getRealPath());
+            $thumb->resize(80, 80);
+            $thumb->save('storage/images/' . $thumbStore);
         } else {
             $fileNameToStore = 'noimage.png';
         }
@@ -143,7 +143,12 @@ class PostController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
+            'sub-title' => 'required',
+            'slug' => 'required',
             'body' => 'required',
+            'category' => 'required',
+            'publish' => 'required',
+            'cover_image' => 'image|nullable|max:1999',
         ]);
         $post = Post::where('post_id', $id)->get()[0];
         // Handle File Upload
@@ -157,15 +162,15 @@ class PostController extends Controller
             // Filename to store
             $fileNameToStore = $filename . '_' . time() . '.' . $extension;
             // Upload Image
-            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+            $path = $request->file('cover_image')->storeAs('public/images/', $fileNameToStore);
             // Delete file if exists
-            Storage::delete('public/cover_images/' . $post->cover_image);
+            Storage::delete('public/images/' . $post->cover_image);
 
             //Make thumbnails
             $thumbStore = 'thumb.' . $filename . '_' . time() . '.' . $extension;
             $thumb = Image::make($request->file('cover_image')->getRealPath());
             $thumb->resize(80, 80);
-            $thumb->save('storage/cover_images/' . $thumbStore);
+            $thumb->save('storage/images/' . $thumbStore);
 
         }
         // $post->id = $request->input('id');

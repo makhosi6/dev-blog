@@ -15,8 +15,8 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:url" content="https://thereference.dev/">
 @endpush
-@push('non-index')
-<meta name="robots" content="noindex, nofollow">
+@push('index')
+<meta name="robots" content="index, follow">
 @endpush
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/max247rduzij-qAjJk-un3BI.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>

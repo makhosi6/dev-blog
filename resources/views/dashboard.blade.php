@@ -37,7 +37,7 @@
                                 <div class="row">
                                     <div class="col-md-6 col-lg-6 col-xl-8 d-flex">
                                         <a href="/article/{!!$post->slug!!}" class="img w-100 mb-3 mb-md-0"
-                                            style="background-image: url('/storage/cover_images/{{$post->cover_image}}');"></a>
+                                            style="background-image: url('/storage/images/{{$post->cover_image}}');"></a>
                                     </div>
                                     <div class="col-md-6 col-lg-6 col-xl-4 d-flex">
                                         <div class="text w-100 pl-md-3">

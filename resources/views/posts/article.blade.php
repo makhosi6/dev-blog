@@ -5,12 +5,12 @@
 <meta name="description" content="{!!$post->title!!}">
 <meta name="twitter:title" content="{!!$post->title!!}">
 <meta name="twitter:description" content="{!!$post->{'sub-title'}!!}">
-<meta name="twitter:image" content="https://thereference.dev/storage/cover_images/{!!$post->cover_image!!}">
+<meta name="twitter:image" content="https://thereference.dev/storage/images/thumb.{!!$post->cover_image!!}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://thereference.dev/article/{!!$post->slug!!}">
 <meta property="og:title" content="{!!$post->title!!}">
 <meta property="og:description" content="{!!$post->{'sub-title'}!!}">
-<meta property="og:image" content="https://thereference.dev/storage/cover_images/{{$post->cover_image}}">
+<meta property="og:image" content="https://thereference.dev/storage/images/thumb.{{$post->cover_image}}">
 <meta property="og:url" content="https://thereference.dev/article/{!!$post->slug!!}">
 <meta property="og:type" content="website" />
 @endpush
@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-lg-8 ftco-animate">
                 <p class="mb-5">
-                    <img itemprop="image" src="/storage/cover_images/{{$post->cover_image}}" alt="{{$post->title}}" class="img-fluid">
+                    <img class="lazy img-fluid" loading="lazy" itemprop="image" src="/images/loading.gif" data-src="/storage/images/{{$post->cover_image}}" alt="{{$post->title}}" >
                 </p>
                 <h2 itemprop="alternativeHeadline" class="mb-3">{!!$post->{'sub-title'}!!}</h2>
                 <section itemprop="articleBody" class="body">
@@ -82,7 +82,7 @@
                     @foreach ($articles as $article)
                     <div class="block-21 mb-4 d-flex">
                         <a class="blog-img mr-4" role="img" aria-label={!!$article->title!!} style="background-image:
-                            url('/storage/cover_images/{{$article->cover_image}}');"></a>
+                            url('/storage/images/thumb.{{$article->cover_image}}');"></a>
                         <div class="text">
                             <h3 class="heading"><a href="/article/{!!$article->slug!!}">{!!$article->title!!}</a></h3>
                             <div class="meta">
@@ -114,12 +114,12 @@
     "@context": "https://schema.org/",
     "@type": "Article",
     "name": "{!!$post->title!!}",
-    "image": "{!!$post->cover_image!!}",
+    "image": "thumb.{!!$post->cover_image!!}",
     "description": "{!!$post->{'sub-title'}!!}",
     "datePublished": "{!!$post->created_at!!}",
     "dateModified": "{!!$post->updated_at!!}",
     "keywords": ["{!!$post->category!!}"],
-    "thumbnailUrl": "{!!$post->cover_image!!}",
+    "thumbnailUrl": "thumb.{!!$post->cover_image!!}",
     "publisher": {
         "@context": "https://schema.org",
         "@type": "WebSite",

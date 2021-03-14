@@ -40,8 +40,10 @@
             @foreach ($posts as $post)
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="/admins/{!!$post->slug!!}" class="block-20"
-                        style='background-image: url("/storage/cover_images/{{$post->cover_image}}");'>
+                    <a itemprop="image" href="/admins/{!!$post->slug!!}" class="laxy-img block-20" role="img"
+                        aria-label="{!!$post->title!!}"
+                        data-img="/storage/images/{{$post->cover_image}}"
+                        style='background-image: url("/images/loading.gif");'>
                     </a>
                     <div class="text p-4 float-right d-block">
                         <div class="topper d-flex align-items-center">
@@ -81,9 +83,9 @@
                                 {!!Form::close()!!}
                             </span>
                         </div>
-
                     </div>
                 </div>
+                
             </div>
             @endforeach
 

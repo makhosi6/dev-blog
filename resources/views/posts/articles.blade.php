@@ -5,14 +5,17 @@
 @endpush
 @push('page-meta')
 <title>{!!$name!!} - thereference.dev</title>
-<meta name="description" content="On point web development how-tos, references, tutorials, examples and guides. Covering different topics.">
+<meta name="description"
+    content="On point web development how-tos, references, tutorials, examples and guides. Covering different topics.">
 <meta property="og:title" content="{!!$name!!}">
-<meta property="og:description" content="On point web development how-tos, references, tutorials, examples and guides. Covering different topics. ">
-<meta property="og:image" content="https://thereference.dev/storage/cover_images/thumbnail.jpg">
+<meta property="og:description"
+    content="On point web development how-tos, references, tutorials, examples and guides. Covering different topics. ">
+<meta property="og:image" content="https://thereference.dev/storage/images/thumbnail.jpg">
 <meta property="og:url" content="https://thereference.dev/articles/{!!$name!!}">
 <meta property="og:type" content="webpage" />
 <meta name="twitter:title" content="{!!$name!!}">
-<meta name="twitter:description" content=" On point web development how-tos, references, tutorials, examples and guides. Covering different topics. ">
+<meta name="twitter:description"
+    content=" On point web development how-tos, references, tutorials, examples and guides. Covering different topics. ">
 <meta name="twitter:image" content=" https://thereference.dev/thumbnail.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:url" content="https://example.com/articles/{!!$name!!}">
@@ -25,17 +28,16 @@
             <div class="col-md-9 ftco-animate pb-5 text-center">
                 <h1 id="lh" class="mb-3 caps bread">{!!$name!!}</h1>
                 <p itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumbs">
-                    <span itemprop="itemListElement" itemscope
-                    itemtype="https://schema.org/ListItem" class="mr-2">
+                    <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="mr-2">
                         <a itemprop="item" href="/">Home <i class="ion-ios-arrow-forward"></i></a>
-                    </span> 
-                    <span itemprop="itemListElement" itemscope
-                    itemtype="https://schema.org/ListItem"  class="mr-2">
-                        <a itemprop="item" href="/articles/{!!$name!!}" >Articles <i class="ion-ios-arrow-forward"></i></a>
                     </span>
-                    <span itemprop="itemListElement" itemscope
-                    itemtype="https://schema.org/ListItem"> 
-                        <a itemprop="item" href="/articles/{!!$name!!}"> {!!$name!!} </a><i class="ion-ios-arrow-forward"></i>
+                    <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="mr-2">
+                        <a itemprop="item" href="/articles/{!!$name!!}">Articles <i
+                                class="ion-ios-arrow-forward"></i></a>
+                    </span>
+                    <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/articles/{!!$name!!}"> {!!$name!!} </a><i
+                            class="ion-ios-arrow-forward"></i>
                     </span>
                 </p>
             </div>
@@ -51,15 +53,16 @@
                 <article itemscope itemtype="https://schema.org/Article" class="case">
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-xl-8 d-flex">
-                            <a href="/article/{!!$post->slug!!}" class="img w-100 mb-3 mb-md-0" role="img"
-                                aria-label={!!$post->title!!}
-                                itemprop="image"
-                                style="background-image: url('/storage/cover_images/{{$post->cover_image}}');"></a>
+
+                            <a itemprop="image" href="/article/{!!$post->slug!!}" class="laxy-img block-20" role="img"
+                                aria-label="{!!$post->title!!}" data-img="/storage/images/{{$post->cover_image}}"
+                                style='background-image: url("/images/loading.gif");'>
+                            </a>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xl-4 d-flex">
                             <div class="text w-100 pl-md-3">
                                 <span itemprop="category" class="subheading">{!!$post->category!!}</span>
-                                <h2 itemprop="headline" ><a href="/article/{!!$post->slug!!}">{!!$post->title!!}</a></h2>
+                                <h2 itemprop="headline"><a href="/article/{!!$post->slug!!}">{!!$post->title!!}</a></h2>
                                 <ul class="media-social list-unstyled">
                                     <li class="ftco-animate">
                                         <a href="http://twitter.com/reference_dev" rel="nofollow" target="_blank">
@@ -77,8 +80,9 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <div class="meta">
-                                    <p class="mb-0"><a href="#"><time datetime="{!!$post->created_at!!} "itemprop="datePublished">{!!$post->date!!}
+                                <div itemprop="meta" class="meta">
+                                    <p class="mb-0"><a href="#"><time datetime="{!!$post->created_at!!}"
+                                                itemprop="datePublished">{!!$post->date!!}
                                             </time></a> | <a href="#">1 min read</a></p>
                                 </div>
                             </div>
@@ -118,7 +122,7 @@
             "width": "512",
             "@context": "http://schema.org",
             "@type": "ImageObject"
-          },
+        },
         "mainEntityOfPage": "https://thereference.dev",
         "creator": {
             "@context": "https://schema.org",
@@ -146,8 +150,7 @@
         "numberOfItems": "{{count($posts)}}",
         "itemListOrder": "Descending",
         "itemListElement": [
-            @foreach($posts as $key => $post)
-            {
+            @foreach($posts as $key => $post) {
                 "@type": "Article",
                 "position": "{!!$key + 1!!}",
                 "mainEntityOfPage": {
@@ -158,7 +161,7 @@
                 "headline": "{!!$post->title!!}",
                 "datePublished": "{!!$post->created_at!!}",
                 "dateModified": "{!!$post->updated_at!!}",
-                "image": "https://thereference.dev/storage/cover_images/{{$post->cover_image}}",
+                "image": "https://thereference.dev/storage/images/thumb.{{$post->cover_image}}",
                 "url": "https://thereference.dev/article/{!!$post->slug!!}",
                 "author": "Makhosandile",
                 "publisher": {

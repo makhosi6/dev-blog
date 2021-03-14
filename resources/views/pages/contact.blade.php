@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('content')
-@push('non-index')
-<meta name="robots" content="noindex, nofollow">
+@push('index')
+<meta name="robots" content="index, follow">
 @endpush
 @push('page-meta')
 <title>thereference.dev - Contact</title>
@@ -85,7 +85,7 @@
             <div class="col-lg-6 d-flex">
                 {{-- <div id="map" class="bg-white">
                 </div> --}}
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13242.796122306772!2d18.414693735434604!3d-33.923144883388964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc6763a3ee4fe9%3A0x95516cf23f5ee8f5!2sCape%20Town%20City%20Centre%2C%20Cape%20Town%2C%208000!5e0!3m2!1sen!2sza!4v1614537818561!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe  loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13242.796122306772!2d18.414693735434604!3d-33.923144883388964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc6763a3ee4fe9%3A0x95516cf23f5ee8f5!2sCape%20Town%20City%20Centre%2C%20Cape%20Town%2C%208000!5e0!3m2!1sen!2sza!4v1614537818561!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </div>

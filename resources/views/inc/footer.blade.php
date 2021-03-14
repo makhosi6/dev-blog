@@ -32,7 +32,7 @@
                     <div class="block-21 mb-4 d-flex">
                         <a href="/article/{!!$article->slug!!}" class="img mr-4 rounded" role="img"
                             aria-label={!!$article->title!!} style='background-image:
-                            url("/storage/cover_images/{{$article->cover_image}}");'></a>
+                            url("/storage/images/thumb.{{$article->cover_image}}");'></a>
                         <div class="text">
                             <h3 class="heading"><a href="/articles/{!!$article->slug!!}">{!!$article->title!!}</a></h3>
                             <div class="meta">
@@ -89,7 +89,7 @@
                             }
                         </style>
                         <li class="itm">
-                            <a href="#"><span class="ion-ios-arrow-forward mr-3"></span>Articles</a>
+                            <a><span class="ion-ios-arrow-forward mr-3"></span>Articles</a>
                             <ul class="dropdown caps">
                                 @foreach ($categories as $category)
                                 <li><a href="/articles/{!!$category->category!!}">{!!$category->category!!}</a></li>

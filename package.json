@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "save-dev": "0.0.1-security",
-    "sw-precache-webpack-plugin": "^1.0.0"
+    "sw-precache-webpack-plugin": "^1.0.0",
+    "vanilla-lazyload": "^17.3.1"
   }
 }

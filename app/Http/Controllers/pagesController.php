@@ -43,7 +43,7 @@ class pagesController extends Controller
     public function articles($params)
     {
         try {
-            $posts = DB::table('posts')->where('category', '=', $params)->paginate(15);
+            $posts = DB::table('posts')->where('category', '=', $params)->orderBy('created_at', 'desc')->paginate(15);
             return view('posts.articles')->with('posts', $posts, )->with('name', $params);
         } catch (\Exception $th) {
             return view('errors.500');
