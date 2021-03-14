@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-lg-8 ftco-animate">
                 <p class="mb-5">
-                    <img class="lazy img-fluid" loading="lazy" itemprop="image" src="/images/loading.gif" data-src="/storage/images/{{$post->cover_image}}" alt="{{$post->title}}" >
+                    <img class="lazy laxy-img img-fluid" loading="lazy" itemprop="image" src="/images/loading.gif" data-src="/storage/images/{{$post->cover_image}}" alt="{{$post->title}}" >
                 </p>
                 <h2 itemprop="alternativeHeadline" class="mb-3">{!!$post->{'sub-title'}!!}</h2>
                 <section itemprop="articleBody" class="body">

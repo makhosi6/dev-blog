@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
+
 <head>
     @stack('post-meta')
     @stack('page-meta')
@@ -20,6 +21,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHPVF1EKZM"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -42,40 +44,57 @@
 
     <link rel="manifest" href="/manifest.json">
     <link href="https://thereference.dev/" rel="canonical">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" />
     {{-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> --}}
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="preload" href="{{asset('css/animate.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset('css/animate.css')}}"></noscript>
-    <link rel="preload" href="{{asset('css/owl.carousel.min.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="{{asset('css/animate.css')}}"></noscript>
+    <link rel="preload" href="{{asset('css/owl.carousel.min.css')}}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}"></noscript>
     {{-- <link rel="stylesheet" href="{{asset('css/open-iconic-bootstrap.min.css')}}"> --}}
-    <link rel="preload" href="{{asset('css/owl.theme.default.min.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}"></noscript>
-    <link rel="preload" href="{{asset('css/magnific-popup.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}"></noscript>
+    <link rel="preload" href="{{asset('css/owl.theme.default.min.css')}}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}"></noscript>
+    <link rel="preload" href="{{asset('css/magnific-popup.css')}}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}"></noscript>
     <link rel="preload" href="{{asset('css/aos.css')}}">
-    <noscript><link rel="stylesheet" href="{{asset('css/aos.css')}}"></noscript>
-    <link rel="preload" href="{{asset('css/ionicons.min.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset('css/ionicons.min.css')}}"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="{{asset('css/aos.css')}}"></noscript>
+    <link rel="preload" href="{{asset('css/ionicons.min.css')}}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{asset('css/ionicons.min.css')}}"></noscript>
     <link rel="preload" href="{{asset('css/flaticon.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset('css/flaticon.css')}}"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="{{asset('css/flaticon.css')}}"></noscript>
     <link rel="preload" href="{{asset('css/icomoon.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{asset('css/icomoon.css')}}"></noscript>
-    
-    
+    <noscript>
+        <link rel="stylesheet" href="{{asset('css/icomoon.css')}}"></noscript>
+
+
     <style>
-        .ftco-footer .ftco-footer-widget ul li, .ftco-footer .ftco-footer-widget ul li a {
+        .ftco-footer .ftco-footer-widget ul li,
+        .ftco-footer .ftco-footer-widget ul li a {
             min-height: 48px !important;
         }
-        .meta > div  {
+
+        .meta>div {
             color: rgb(148 148 148) !important;
         }
-        .subheading{
+
+        .subheading {
             color: rgb(0 0 0 / 57%) !important;
         }
+
         .laxy-img {
-            background-color:#d2d2d275 !important;
+            background-color: #d2d2d275 !important;
         }
     </style>
 </head>
@@ -98,6 +117,11 @@
                 stroke="#F96D00" />
         </svg>
     </div>
+    <script>
+        window.lazyLoadOptions = {
+        };
+      </script>
+    <script async src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
     <script src="/js/lazyload.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery-migrate-3.0.1.min.js"></script>
