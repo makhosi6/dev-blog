@@ -9334,6 +9334,18 @@ textarea.form-control {
     #label{
       color: grey !important;
     }
+
+    .references .list-ref, .references ul, .list-ref{
+      list-style: disc !important;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .references .list-ref > li,    .references ul > li, .list-ref > li {
+      display: list-item !important;
+   
+
+    }
     /* .grd-btn:last-child >  {
      display: block !important;
     } */
