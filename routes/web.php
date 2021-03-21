@@ -24,6 +24,10 @@ Route::get('/admins/home', function () {
 //     return $request->user();
 // })->middleware('auth');
 
+// Route::get('/forbidden', function(){
+//     return view('errors.403');
+// });
+
 Route::get('/dashboard', 'DashboardController@index');
 //
 Route::get('/', 'pagesController@index');
@@ -35,3 +39,4 @@ Route::get('/contact','pagesController@contact');
 Auth::routes();
 
 Route::resource('admins', 'PostController');
+

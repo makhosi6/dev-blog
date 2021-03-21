@@ -56,7 +56,7 @@
       
         <div class="form-group">
             {{Form::label('references', 'References')}}
-            {{Form::textarea('references', $post->references , ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'References Text'])}}
+            {{Form::textarea('references', $post->references , ['id' => 'ref-ckeditor', 'class' => 'form-control', 'placeholder' => 'References Text'])}}
         </div>
         <div class="form-group">
             {{Form::file('cover_image')}}

@@ -34,7 +34,7 @@
                             aria-label={!!$article->title!!} style='background-image:
                             url("/storage/images/thumb.{{$article->cover_image}}");'></a>
                         <div class="text">
-                            <h3 class="heading"><a href="/articles/{!!$article->slug!!}">{!!$article->title!!}</a></h3>
+                            <h3 class="heading"><a href="/article/{!!$article->slug!!}">{!!$article->title!!}</a></h3>
                             <div class="meta">
                                 <div>
                                     <a href="#">{!!$article->date!!}</a>
