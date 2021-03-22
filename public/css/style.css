@@ -13317,7 +13317,7 @@ textarea.form-control {
 
 @import './open-iconic-bootstrap.min.css';
 
-h1,span,h2,a,h3,h4,h5,h6, p,b {
+* {
  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, sans-serif !important;
 
