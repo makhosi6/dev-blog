@@ -6,6 +6,6 @@
 
 ## thereference.dev.
 
-Powerered by [Laravel](http://laravel.com/) And thanks to [Colorlib](https://colorlib.com/) for this awesome design.
+Powered by [Laravel](http://laravel.com/) And thanks to [Colorlib](https://colorlib.com/) for this awesome design.
 
 - **[Live here](https://thereference.dev)**
