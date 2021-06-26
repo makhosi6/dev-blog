@@ -13316,7 +13316,6 @@ textarea.form-control {
   }
 }
 
-@import './open-iconic-bootstrap.min.css';
 
 * {
 
@@ -13329,7 +13328,7 @@ textarea.form-control {
   -webkit-transition: all 0.5s ease !important;
   -moz-transition: all 0.5s ease !important;
   -o-transition: all 0.5s ease !important;
-}
+} 
 
 .caps {
   text-transform: capitalize !important;
@@ -13377,7 +13376,7 @@ textarea.form-control {
   margin-top: 20px !important;
 }
 
-.io-font {
+.io-font, .io, #io {
   font-family: Icons !important;
 }
 

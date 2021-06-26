@@ -64,6 +64,13 @@
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}"></noscript>
+    
+        <link rel="preload" href="{{asset('css/open-iconic-bootstrap.min.css')}}" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{asset('css/open-iconic-bootstrap.min.css')}}"></noscript>
+
+
     <link rel="preload" href="{{asset('css/aos.css')}}">
     <noscript>
         <link rel="stylesheet" href="{{asset('css/aos.css')}}"></noscript>

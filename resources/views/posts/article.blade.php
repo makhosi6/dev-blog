@@ -73,11 +73,12 @@
                             <div class="tabulation-2 mt-4">
                                 <ul class="nav nav-pills nav-fill d-md-flex d-block">
                                     <li class="nav-item mb-md-0 mb-2 feedback-btn">
-                                        <a class="nav-link active py-2" data-toggle="tab" href="#home1">Yes
-                                        </a>
+                                        <span class="nav-link active py-2" >Yes
+                                        </span>
                                     </li>
                                     <li class="nav-item px-lg-2 mb-md-0 mb-2 feedback-btn">
-                                        <a class="nav-link py-2" data-toggle="tab" href="#home2">No</a>
+                                        <span class="nav-link py-2">No</span>
+                                        
                                     </li>
                                   
                                 </ul>
