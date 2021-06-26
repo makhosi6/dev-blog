@@ -44,8 +44,8 @@
 
     <link rel="manifest" href="/manifest.json">
     <link href="https://thereference.dev/" rel="canonical">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" as="style"
-        onload="this.onload=null;this.rel='stylesheet'" />
+    {{-- <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" /> --}}
     {{-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> --}}
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="preload" href="{{asset('css/animate.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">

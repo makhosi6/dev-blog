@@ -40,7 +40,7 @@
                                     <a href="#">{!!$article->date!!}</a>
                                 </div>
                                 <div>
-                                    <a href="/article/{{$article->category}}" class="caps">{!!$article->category!!}</a>
+                                    <a href="/articles/{{$article->category}}" class="caps">{!!$article->category!!}</a>
                                 </div>
                             </div>
                         </div>
