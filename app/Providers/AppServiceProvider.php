@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
         $articles = Post::orderBy('created_at', 'desc')->take(3)->get();
 
         foreach ($categories as $c) {
-            $unique[$c->category] = $c;
+            $unique[strtolower($c->category)] = $c;
         }
        
         View::share("categories", $unique);

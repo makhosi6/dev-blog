@@ -1,7 +1,7 @@
 {
  "name": "thereference.dev",
- "theme_color": "#868181",
- "background_color": "#868181",
+ "theme_color": "#000",
+ "background_color": "#000",
  "start_url": "https://thereference.dev",
  "display": "standalone",
  "icons": [
@@ -14,7 +14,7 @@
   {
    "src": "\/android-icon-48x48.png",
    "sizes": "48x48",
-   "type": "image\/png",
+   "type": "image\/png",         
    "density": "1.0"
   },
   {
