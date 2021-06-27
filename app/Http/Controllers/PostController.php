@@ -201,4 +201,5 @@ class PostController extends Controller
         $post->delete();
         return redirect('/admins')->with('Success', 'Post Deleted');
     }
+    
 }

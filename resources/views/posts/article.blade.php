@@ -72,10 +72,14 @@
                             <h3>Was this article helpful?</h3>
                             <div class="tabulation-2 mt-4">
                                 <ul class="nav nav-pills nav-fill d-md-flex d-block">
+                                 {!!Form::open(['action' => ['PostController@like', $post->post_id], 'method' => 'POST'])!!}
+                                        {{Form::hidden('_method', 'POST')}}
                                     <li class="nav-item mb-md-0 mb-2 feedback-btn">
                                         <span class="nav-link active py-2" >Yes
                                         </span>
                                     </li>
+                                           {{Form::submit('POST', ['class' => 'plain'])}}
+                                {!!Form::close()!!}
                                     <li class="nav-item px-lg-2 mb-md-0 mb-2 feedback-btn">
                                         <span class="nav-link py-2">No</span>
                                         
