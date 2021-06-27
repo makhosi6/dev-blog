@@ -1,16 +1,16 @@
 var staticCacheName = "pwa-v" + new Date().getTime();
 var filesToCache = [
-    // '/offline',
-    './css/style.css',
-    './js/app.js',
-    './android-icon-72x72.png',
-    './android-icon-96x96.png',
-    './android-icon-128x128.png',
-    './android-icon-144x144.png',
-    './android-icon-152x152.png',
-    './android-icon-192x192.png',
-    './android-icon-384x384.png',
-    './android-icon-512x512.png',
+    '/offline',
+    '/css/style.css',
+    '/js/app.js',
+    '/android-icon-72x72.png',
+    '/android-icon-96x96.png',
+    '/android-icon-128x128.png',
+    '/android-icon-144x144.png',
+    '/android-icon-152x152.png',
+    '/android-icon-192x192.png',
+    '/android-icon-384x384.png',
+    '/android-icon-512x512.png',
 ];
 
 // Cache on install
