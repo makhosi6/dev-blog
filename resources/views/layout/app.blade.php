@@ -2,6 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 
 <head>
+
     @stack('post-meta')
     @stack('page-meta')
     @stack('index')
@@ -14,6 +15,18 @@
     <meta name="msapplication-TileColor" content="#868181">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta content="#868181" name="theme-color">
+
+<link rel="manifest" href="/manifest.json">
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="thereference.dev">
+<link rel="icon" sizes="512x512" href="/android-icon-192x192.png">
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#868181">
+<meta name="apple-mobile-web-app-title" content="thereference.dev">
+<link rel="apple-touch-icon" href="/apple-icon-152x152.png">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--GA-->
@@ -27,7 +40,7 @@
         }
         gtag('js', new Date());
         gtag('config', 'G-QHPVF1EKZM');
-    </script>
+ 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -42,7 +55,6 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-    <link rel="manifest" href="/manifest.json">
     <link href="https://thereference.dev/" rel="canonical">
     {{-- <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" as="style"
         onload="this.onload=null;this.rel='stylesheet'" /> --}}
@@ -146,9 +158,7 @@
     @stack('map-scripts')
     @stack('editor-scripts')
     @stack('json+ld')
-
-
-
+   </script>
 </body>
 
 </html>

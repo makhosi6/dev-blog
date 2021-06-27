@@ -2,7 +2,11 @@
  "name": "thereference.dev",
  "theme_color": "#000",
  "background_color": "#000",
- "start_url": "https://thereference.dev",
+ "start_url": "https://thereference.dev/",
+"short_name" : "reference.dev",
+"background_color" : "#ffffff",
+"orientation" : "any",
+"status_bar" : "black",
  "display": "standalone",
  "icons": [
   {
