@@ -5,24 +5,28 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 
-class LikesController extends Controller
+class feedbackController extends Controller
 {
-     /**
+      /**
      * Increment number of likes.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-     public function like($id){
+    public function upVote($id){
         Post::where('post_id', $id)->increment('likes');
+        return json_encode(["status" => 200, "mssg" => "OK"]);
      }
+    public function dig(){
+        echo "DIG!!";
+    }
      /**
      * Increment number of dislikes.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-     public function dislike($id){
+     public function downVote($id){
         Post::where('post_id', $id)->increment('dislikes');
      }
 }

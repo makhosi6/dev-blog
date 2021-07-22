@@ -53,7 +53,6 @@
             {{Form::label('body', 'Body')}}
             {{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
         </div>
-      
         <div class="form-group">
             {{Form::label('references', 'References')}}
             {{Form::textarea('references', '', ['id' => 'ref-ckeditor', 'class' => 'form-control', 'placeholder' => 'References Text'])}}
