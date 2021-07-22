@@ -15,8 +15,8 @@ class AddLikesToPosts extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             //
-            $table->integer('likes');
-            $table->integer('dislikes');
+            $table->integer('likes')->default(0);
+            $table->integer('dislikes')->default(0);
         });
     }
 

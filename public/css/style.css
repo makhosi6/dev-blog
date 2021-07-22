@@ -13317,7 +13317,16 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
-
+.btn-edit{
+  color: var(--yellow) !important;
+  border: 2px solid var(--yellow);
+  padding: 5px 10px;
+} .btn-delete{
+  color: var(--danger) !important;
+  border: 2px solid var(--danger) !important;
+  padding: 5px 10px;
+ 
+} 
 * {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, sans-serif !important;
   transition: all 0.5s ease !important;

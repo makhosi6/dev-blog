@@ -19,11 +19,11 @@
 </section>
 <section>
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
+    {{-- <div class="row"> --}}
+        {{-- <div class="col-md-8 col-md-offset-2"> --}}
+            {{-- <div class="panel panel-default"> --}}
                
-                <div class="panel-body">
+                {{-- <div class="panel-body"> --}}
                  <h2 class="my-4 caps" style="font-size: 40px;font-weight: 700;">Articles for {!!$user->name!!}</h2>
                     <hr>
                     <p>
@@ -48,16 +48,16 @@
                                                 <p class="mb-0"><a href="javascript:void(0)">{!!$post->date!!}</a> | <a href="javascript:void(0)">12 min read</a></p>
                                             </div>
                                             <div class="grd-btn m-4">
-                                                <span>
+                                                <span class="btn-edit" >
                                                     <a href="/admins/{{$post->post_id}}/edit" class="btn-custom"><span
                                                         class="ion-ios-create mr-3"></span>Edit</a>
                                                 </span>
-                                                <span>
+                                                <span class="btn-delete">
                                                     {!!Form::open(['action' => ['PostController@destroy', $post->post_id], 'method' => 'POST',
                                                     'class' => 'pull-right'])!!}
                                                     {{Form::hidden('_method', 'DELETE')}}
                                                     <span class="ion-ios-trash mr-3"></span>
-                                                    {{Form::submit('DELETE', ['class' => 'plain'])}}
+                                                    {{Form::submit('DELETE', ['class' => 'plain text-danger'])}}
                                                     {!!Form::close()!!}
                                                 </span>
                                             </div>
@@ -76,10 +76,10 @@
                         </div>
                     </div>
                     @endif
-                </div>
-            </div>
-        </div>
-    </div>
+                {{-- </div> --}}
+            {{-- </div> --}}
+        {{-- </div> --}}
+    {{-- </div> --}}
 </div>
 </section>
 @endsection

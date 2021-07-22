@@ -13,9 +13,9 @@ class feedbackController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function upVote($id){
+    public function upVote($id)
+    {
         Post::where('post_id', $id)->increment('likes');
-        return json_encode(["status" => 200, "mssg" => "OK"]);
      }
     public function dig(){
         echo "DIG!!";
@@ -26,7 +26,8 @@ class feedbackController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-     public function downVote($id){
+     public function downVote($id)
+     {
         Post::where('post_id', $id)->increment('dislikes');
      }
 }

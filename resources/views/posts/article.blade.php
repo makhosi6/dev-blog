@@ -72,9 +72,8 @@
                             <h3>Was this article helpful?</h3>
                             <div class="tabulation-2 mt-4">
                                 <ul class="nav nav-pills nav-fill d-md-flex d-block">
-                                    {!!Form::open(['action' => ['PostController@upVote', $post->post_id], 'method' => 'POST'])!!}
+                                    {!! Form::open(['url' => action('feedbackController@upVote', [$post->id]), 'method' => 'PUT', 'id' => 'update' ]) !!}
                                     <li class="nav-item mb-md-0 mb-2 feedback-btn">
-                                        {{Form::hidden('_method', 'POST')}}
                                         {{Form::submit('Yes', ['class' => 'nav-link active py-2'])}}
                                     </li>
                                     {!!Form::close()!!}

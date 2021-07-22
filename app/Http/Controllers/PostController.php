@@ -21,6 +21,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function kill($id){
+        echo "Kill".$id;
+    }
     public function index()
     {
         $posts = Post::orderBy('created_at', 'desc')->paginate(15);
@@ -76,7 +79,7 @@ class PostController extends Controller
             $thumb->resize(80, 80);
             $thumb->save('storage/images/' . $thumbStore);
         } else {
-            $fileNameToStore = 'noimage.png';
+            $fileNameToStore = 'noimage.jpg';
         }
 
         $post = new Post;
@@ -198,6 +201,21 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::where('post_id', $id)->get()[0];
+        if (!isset($post)){
+            return redirect('/dashboard')->with('error', 'No Post Found');
+        }
+
+        // Check for correct user
+        if(auth()->user()->id !==$post->user_id){
+            return redirect('/dashboard')->with('error', 'Unauthorized Page');
+        }
+
+        if($post->cover_image != 'noimage.jpg'){
+            // Delete Image
+            Storage::delete('public/images/'.$post->cover_image);
+            Storage::delete('storage/images/thumb.'.$post->cover_image);
+        }
+        
         $post->delete();
         return redirect('/admins')->with('Success', 'Post Deleted');
     }
